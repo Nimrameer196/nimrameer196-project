@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Muhammad Saad</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <div class="logo-icon">MS</div>
+        <span class="logo-text">Muhammad Saad</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <button
+          id="theme-toggle"
+          style="
+            background: none;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-left: 20px;
+          "
+        >
+          LIGHT MODE
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-header">
+      <h1>Resume</h1>
+    </div>
+
+    <div class="resume-container">
+      <div class="section">
+        <p class="section-label">Education</p>
+        <div class="resume-item">
+          <h3>Bachelor of Mechanical Engineering</h3>
+          <p class="meta">University Name &bull; 2020 - 2024</p>
+          <p>
+            Studied core mechanical engineering subjects including
+            thermodynamics, fluid mechanics, and CAD design.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <p class="section-label">Experience</p>
+        <div class="resume-item">
+          <h3>Mechanical Engineer</h3>
+          <p class="meta">Company Name &bull; 2024 - Present</p>
+          <p>
+            Working on product design and development using CAD tools and
+            engineering principles.
+          </p>
+        </div>
+        <div class="resume-item">
+          <h3>Engineering Intern</h3>
+          <p class="meta">Company Name &bull; 2023</p>
+          <p>
+            Assisted in manufacturing processes and design for production
+            workflows.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <p class="section-label">Skills</p>
+        <div class="skills-grid">
+          <span class="skill-tag">CAD Design</span>
+          <span class="skill-tag">CNC Machining</span>
+          <span class="skill-tag">SolidWorks</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">FEA Analysis</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Product Design</span>
+          <span class="skill-tag">Manufacturing</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Muhammad Saad &bull; Mechanical Engineer</p>
+    </footer>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+
+      // 1. Page load hote hi check karo ke diary (localStorage) mein kya likha hai
+      if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        themeToggle.innerText = "DARK MODE";
+      }
+
+      // 2. Button click hone par diary mein save karo
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+          themeToggle.innerText = "DARK MODE";
+          localStorage.setItem("theme", "light"); // Diary mein likh diya
+        } else {
+          themeToggle.innerText = "LIGHT MODE";
+          localStorage.setItem("theme", "dark"); // Diary mein badal diya
+        }
+      });
+    </script>
+  </body>
+</html>

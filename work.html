@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work - Muhammad Saad</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <div class="logo-icon">MS</div>
+        <span class="logo-text">Muhammad Saad</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <button
+          id="theme-toggle"
+          style="
+            background: none;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 11px;
+            letter-spacing: 1px;
+            margin-left: 20px;
+          "
+        >
+          LIGHT MODE
+        </button>
+      </div>
+    </nav>
+
+    <div class="page-header">
+      <h1>Work</h1>
+    </div>
+
+    <div class="work-page-grid">
+      <div class="work-card">
+        <h3>Project One</h3>
+        <p>Mechanical Design &bull; CAD &bull; Engineering</p>
+        <span class="year">2025</span>
+      </div>
+      <div class="work-card">
+        <h3>Project Two</h3>
+        <p>Design for Manufacturing &bull; CNC</p>
+        <span class="year">2024</span>
+      </div>
+      <div class="work-card">
+        <h3>Project Three</h3>
+        <p>Product Design &bull; Prototyping</p>
+        <span class="year">2023</span>
+      </div>
+      <div class="work-card">
+        <h3>Project Four</h3>
+        <p>Mechanical Engineering &bull; Research</p>
+        <span class="year">2023</span>
+      </div>
+    </div>
+
+    <footer>
+      <p>Muhammad Saad &bull; Mechanical Engineer</p>
+    </footer>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+
+      // 1. Page load hote hi check karo ke diary (localStorage) mein kya likha hai
+      if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+        themeToggle.innerText = "DARK MODE";
+      }
+
+      // 2. Button click hone par diary mein save karo
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+          themeToggle.innerText = "DARK MODE";
+          localStorage.setItem("theme", "light"); // Diary mein likh diya
+        } else {
+          themeToggle.innerText = "LIGHT MODE";
+          localStorage.setItem("theme", "dark"); // Diary mein badal diya
+        }
+      });
+    </script>
+  </body>
+</html>
