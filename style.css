@@ -484,6 +484,123 @@ body.light-mode body > p:last-of-type {
   color: #666666;
 }
 
+/* ==========================================
+   PERFECT RESPONSIVE CODE (FOR ALL MOBILES)
+   ========================================== */
+@media (max-width: 768px) {
+  /* Navbar Container Fix */
+  nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 15px 5px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
 
+  /* Logo text aur icon ko center karne ke liye */
+  nav .logo {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 5px !important;
+    margin: 0 auto !important;
+  }
 
+  /* Buttons Wrapper */
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Individual Buttons Settings */
+  .nav-links a {
+    padding: 6px 12px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important; /* Text toote na */
+    display: inline-block !important;
+  }
+
+  /* Work Page ke Cards - Taake screen se baahir na jayein */
+  .project-card, .work-card, [class*="card"] {
+    width: 90% !important;
+    max-width: 360px !important;
+    margin: 15px auto !important;
+    padding: 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Saara text center karne ke liye */
+  .about, .hero, .main-content, h1, h2 {
+    text-align: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ==========================================
+   RESUME PAGE SKILLS BUTTONS (FIXED)
+   ========================================== */
+.skills-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-top: 20px !important;
+  padding: 10px !important;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #1e293b, #0f172a) !important;
+  color: #ffffff !important;
+  border: 1px solid #38bdf8 !important; /* Glowing light blue border */
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  display: inline-block !important;
+}
+
+/* Hover Effect - Jab mouse upar aaye toh glow kare */
+.skill-tag:hover {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+  color: #000000 !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6) !important;
+  transform: translateY(-3px) !important;
+}
+
+/* Mobile responsive screen par buttons ko set rakhne ke liye */
+@media (max-width: 600px) {
+  .skill-tag {
+    padding: 8px 15px !important;
+    font-size: 12px !important;
+  }
+}
+
+/* ==========================================
+   GRID SCREEN OVERFLOW FIX
+   ========================================== */
+/* Jis container mein teeno projects hain, uski width lock karne ke liye */
+.projects-grid, .work-grid, [class*="grid"] {
+  width: 100% !important;
+  max-width: 1200px !important; /* Aapki website ke main wrapper ke mutabiq */
+  margin: 0 auto !important; /* Center mein rakhne ke liye */
+  padding: 0 20px !important; /* Side se thodi safety space */
+  box-sizing: border-box !important;
+  gap: 20px !important; /* Cards ke darmiyan ka faasla thoda safe rakhne ke liye */
+}
+
+/* Taake cards khud ko container ke andar hi adjust karein */
+.project-card, .work-card, [class*="card"] {
+  box-sizing: border-box !important;
+  max-width: 100% !important;
+}
 
