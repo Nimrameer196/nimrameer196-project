@@ -3,107 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhammad Saad</title>
+    <title>Muhammad Saad | Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- NAVBAR -->
-    <nav>
-      <div class="logo">
-        <div class="logo-icon">MS</div>
-        <span class="logo-text">Muhammad Saad</span>
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="logo"></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">About me</a>
+            <a href="work.html">Work</a>
+            <a href="resume.html">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero-container">
+      <h1 class="main-title">MUHAMMAD SAAD</h1>
+      <p class="subtitle">Mechanical Engineer</p>
+    </main>
+
+    <!-- About Me Section -->
+    <section class="about-section">
+      <div class="about-text">
+        <p>
+          Welcome to my space. I am a Mechanical Engineer passionate about
+          designing efficient systems, working with core engineering principles,
+          and solving complex technical problems.
+        </p>
+        <p>
+          With a focus on precision and innovation, my work spans from initial
+          concepts and 3D modeling to practical execution and optimization.
+        </p>
       </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-        <button
-          id="theme-toggle"
+      <div class="about-image-container">
+            <div class="about-image" style="background-image: url('');">
+                <span class="placeholder-text">Image Placeholder</span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT WORK SECTION (3 Projects - Image Ready) -->
+    <section class="recent-work-section">
+      <h2 class="section-heading">RECENT WORK</h2>
+
+      <!-- Project 1: Baad mein image lagane ke liye url('saad1.jpg') likh dena -->
+      <div class="recent-project-card">
+        <div
+          class="recent-project-image"
           style="
-            background: none;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 11px;
-            letter-spacing: 1px;
-            margin-left: 20px;
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+              url(&quot;&quot;);
           "
         >
-          LIGHT MODE
-        </button>
-      </div>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Muhammad Saad</h1>
-      <p class="tagline">Mechanical Engineer &bull; Designer &bull; Builder</p>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-      <p class="section-label">About Me</p>
-      <p>
-        I am a Mechanical Engineer passionate about design and innovation. I
-        integrate engineering principles with creative problem-solving to build
-        solutions that are both functional and impactful.
-      </p>
-    </section>
-
-    <!-- WORK -->
-    <section class="work">
-      <p class="section-label">Recent Work</p>
-      <div class="work-grid">
-        <div class="work-card">
-          <h3>Project One</h3>
-          <p>Mechanical Design &bull; CAD &bull; Engineering</p>
-          <span class="year">2025</span>
-        </div>
-        <div class="work-card">
-          <h3>Project Two</h3>
-          <p>Design for Manufacturing &bull; CNC</p>
-          <span class="year">2024</span>
-        </div>
-        <div class="work-card">
-          <h3>Project Three</h3>
-          <p>Product Design &bull; Prototyping</p>
-          <span class="year">2023</span>
+          <div class="project-overlay-text">
+            <h3>PROJECT APEX</h3>
+            <p>Generative Design • FEA • CAM • CNC Machining<br />2026</p>
+          </div>
         </div>
       </div>
+
+      <!-- Project 2 -->
+      <div class="recent-project-card">
+        <div
+          class="recent-project-image"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+              url(&quot;&quot;);
+          "
+        >
+          <div class="project-overlay-text">
+            <h3>PROJECT HELIX</h3>
+            <p>3D CAD Modeling • Thermal Simulation • Optimization<br />2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="recent-project-card">
+        <div
+          class="recent-project-image"
+          style="
+            background-image:
+              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+              url(&quot;&quot;);
+          "
+        >
+          <div class="project-overlay-text">
+            <h3>TYPHEON</h3>
+            <p>
+              Design for Manufacturing • Fixture Design • CAM • CNC Machining<br />2024
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <p class="section-label">Let's Connect</p>
-      <h2>Muhammad Saad</h2>
-      <div class="social-links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
+    <!-- FOOTER / LET'S CONNECT SECTION -->
+    <footer class="footer-section" id="contact">
+      <div class="connect-box">
+        <a href="mailto:saad@email.com" class="connect-button">LET'S CONNECT</a>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-name">MUHAMMAD SAAD</div>
+        <div class="footer-links">
+          <a href="mailto:saad@email.com">saad@email.com</a>
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Instagram</a>
+        </div>
       </div>
     </footer>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-
-      // 1. Page load hote hi check karo ke diary (localStorage) mein kya likha hai
-      if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light-mode");
-        themeToggle.innerText = "DARK MODE";
-      }
-
-      // 2. Button click hone par diary mein save karo
-      themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-          themeToggle.innerText = "DARK MODE";
-          localStorage.setItem("theme", "light"); // Diary mein likh diya
-        } else {
-          themeToggle.innerText = "LIGHT MODE";
-          localStorage.setItem("theme", "dark"); // Diary mein badal diya
-        }
-      });
-    </script>
   </body>
 </html>

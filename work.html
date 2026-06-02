@@ -3,89 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work - Muhammad Saad</title>
+    <title>Work | Muhammad Saad</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <div class="logo-icon">MS</div>
-        <span class="logo-text">Muhammad Saad</span>
-      </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-        <button
-          id="theme-toggle"
-          style="
-            background: none;
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 11px;
-            letter-spacing: 1px;
-            margin-left: 20px;
-          "
-        >
-          LIGHT MODE
-        </button>
-      </div>
-    </nav>
+    <div class="container">
+      <!-- Header Navigation -->
+      <header class="navbar">
+        <div class="logo"></div>
+        <div class="nav-links">
+          <a href="index.html">About me</a>
+          <a href="work.html" class="active">Work</a>
+          <a href="resume.html">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </header>
 
-    <div class="page-header">
-      <h1>Work</h1>
+      <!-- Top Giant Header Banner -->
+      <section
+        class="work-hero-banner"
+        style="background-image: url(&quot;&quot;)"
+      >
+        <div class="banner-overlay">
+          <h1 class="hero-title-large">WORK</h1>
+        </div>
+      </section>
+
+      <!-- RECENT WORK SECTION (Full Width Layout) -->
+      <section class="recent-work-section">
+        <h2 class="section-heading-centered">RECENT WORK</h2>
+
+        <!-- Project 1 -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>PROJECT APEX</h3>
+              <p>Generative Design • FEA • CAM • CNC Machining</p>
+              <p class="project-year">2025</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>PROJECT HELIX</h3>
+              <p>Generative Design • FEA • CAM • CNC Machining</p>
+              <p class="project-year">2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>TYPHEON</h3>
+              <p>
+                Design for Manufacturing • Fixture Design • CAM • CNC Machining
+              </p>
+              <p class="project-year">2023</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAST WORK SECTION (2-Column Grid Layout) -->
+      <section class="past-work-section">
+        <h2 class="section-heading-centered">PAST WORK</h2>
+
+        <div class="past-work-grid">
+          <!-- Past Project 1 -->
+          <div class="past-project-card">
+            <div
+              class="past-project-image"
+              style="background-image: url(&quot;&quot;)"
+            >
+              <div class="project-overlay-text">
+                <h3>STEPPIN</h3>
+                <p>Design Research • Rapid Prototyping • User Testing</p>
+                <p class="project-year">2022</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Project 2 -->
+          <div class="past-project-card">
+            <div
+              class="past-project-image"
+              style="background-image: url(&quot;&quot;)"
+            >
+              <div class="project-overlay-text">
+                <h3>MODE MOBILITY</h3>
+                <p>CAD • Surface Modelling • Design for Manufacturing</p>
+                <p class="project-year">2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Let's Connect & Footer -->
+      <section class="footer-section">
+        <div class="connect-box" style="background-image: url(&quot;&quot;)">
+          <a href="contact.html" class="connect-button">LET'S CONNECT</a>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-name">MUHAMMAD SAAD</div>
+          <div class="footer-links">
+            <a href="mailto:saad@example.com">SAAD@EXAMPLE.COM</a>
+            <a href="#" target="_blank">LINKEDIN</a>
+            <a href="#" target="_blank">INSTAGRAM</a>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <div class="work-page-grid">
-      <div class="work-card">
-        <h3>Project One</h3>
-        <p>Mechanical Design &bull; CAD &bull; Engineering</p>
-        <span class="year">2025</span>
-      </div>
-      <div class="work-card">
-        <h3>Project Two</h3>
-        <p>Design for Manufacturing &bull; CNC</p>
-        <span class="year">2024</span>
-      </div>
-      <div class="work-card">
-        <h3>Project Three</h3>
-        <p>Product Design &bull; Prototyping</p>
-        <span class="year">2023</span>
-      </div>
-      <div class="work-card">
-        <h3>Project Four</h3>
-        <p>Mechanical Engineering &bull; Research</p>
-        <span class="year">2023</span>
-      </div>
-    </div>
-
-    <footer>
-      <p>Muhammad Saad &bull; Mechanical Engineer</p>
-    </footer>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-
-      // 1. Page load hote hi check karo ke diary (localStorage) mein kya likha hai
-      if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light-mode");
-        themeToggle.innerText = "DARK MODE";
-      }
-
-      // 2. Button click hone par diary mein save karo
-      themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
-
-        if (document.body.classList.contains("light-mode")) {
-          themeToggle.innerText = "DARK MODE";
-          localStorage.setItem("theme", "light"); // Diary mein likh diya
-        } else {
-          themeToggle.innerText = "LIGHT MODE";
-          localStorage.setItem("theme", "dark"); // Diary mein badal diya
-        }
-      });
-    </script>
   </body>
 </html>
