@@ -11,6 +11,7 @@ body {
     font-family: 'Geist', sans-serif;
     min-height: 100vh;
     padding: 40px 80px; /* Page ke sides par achhi spacing ke liye */
+    overflow-x: hidden; /* Mobile par side scroll ko rokne ke liye */
 }
 
 /* Header Navbar Styling */
@@ -23,53 +24,39 @@ body {
     margin-bottom: 60px;
 }
 
-/* Next-Level Engineering Monogram Logo */
-.logo {
+/* ==========================================================================
+   UPDATED LOGO STYLING (As per Saad's Feedback - Bold & Aligned)
+   ========================================================================== */
+.custom-logo {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 15px;
     cursor: pointer;
-    user-select: none;
 }
 
-/* Interconnected Mechanical M | S Monogram */
-.logo::before {
-    content: "M/S";
+.logo-ms {
     font-family: 'EB Garamond', serif;
-    font-size: 32px;
-    font-weight: 700;
-    font-style: italic; /* Slanted line for engineering drafting look */
-    letter-spacing: -2px; /* Letters ko aapas mein overlap karne ke liye */
+    font-size: 34px;
+    font-weight: 800; /* Saad's Requirement: MS fully bold */
+    letter-spacing: 1px;
     color: #1a1a1a;
-    line-height: 1;
-    display: inline-block;
-    position: relative;
-    transform: skewX(-4px); /* Pure structure ko halka sa forward tilt deta hai */
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Premium Minimalist Typography for Name */
-.logo::after {
-    content: "MUHAMMAD SAAD";
-    font-family: 'Geist', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 5px; /* Mazeed elegant aur wide spacing */
+.logo-divider-line {
+    font-size: 30px;
     color: #1a1a1a;
-    text-transform: uppercase;
-    border-left: 1.5px solid #1a1a1a; /* Ab dark sharp separator line */
-    padding-left: 18px;
-    height: 22px;
-    display: flex;
-    align-items: center;
-    opacity: 0.9;
+    font-weight: 700; /* Saad's Requirement: Vertical line divider bold */
+    margin-top: -4px; /* Text ke sath perfect center alignment ke liye */
 }
 
-/* Hover Animation: Logo line subtly expands */
-.logo:hover::before {
-    letter-spacing: 0px; /* Hover karne par M aur S halkay se move honge */
-    color: #555555;
+.logo-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
 }
+
 .nav-links {
     display: flex;
     gap: 30px; /* Links ke darmiyan ka gap */
@@ -89,392 +76,278 @@ body {
 .nav-links a:hover, .nav-links a.active {
     color: #1a1a1a;
 }
-/* Hero Section / Main Name Styling */
-.hero-container {
-    margin-bottom: 60px;
+
+/* ==========================================================================
+   PERFECT HERO OVERLAY & PROJECT IMAGES LAYOUT (UPDATED)
+   ========================================================================== */
+
+.hero-section-new {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end; 
+    padding: 60px;
+    margin-bottom: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #1c1a17; 
 }
 
-.main-title {
-    font-family: 'EB Garamond', serif; /* Classic serif font Haroon Waseem ki tarah */
-    font-size: 84px; /* Bada aur bold impact */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Background image peeche rahegi */
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Image ko thoda upar shift karne ke liye */
+    opacity: 0.65; /* Black frame ke sath blend karne ke liye opacity adjust ki */
+}
+
+.hero-content-shifted {
+    position: relative;
+    z-index: 2; 
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.hero-content-shifted .main-title {
+    font-family: 'EB Garamond', serif;
+    color: #ffffff !important; 
+    font-size: 84px;
     font-weight: 400;
     letter-spacing: -2px;
     line-height: 1;
+    margin: 0;
     text-transform: uppercase;
 }
 
-.subtitle {
-    font-size: 14px;
-    color: #8c8c8c;
-    margin-top: 15px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-/* About Me Section Styling (Side-by-Side Flexbox) */
-.about-section {
-    display: flex !important; /* Forces layout to stay side-by-side */
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 80px;
-    margin-top: 80px;
-    width: 100%;
-}
-
-.about-text {
-    flex: 1;
-    max-width: 550px;
-}
-
-.about-text p {
+.hero-content-shifted .main-subtitle {
     font-family: 'Geist', sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #4a4a4a;
-    margin-bottom: 24px;
-}
-
-.about-image-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.about-image {
-    width: 100%;
-    max-width: 400px;
-    height: 520px;
-    background-color: #eae7e2; /* Clean aesthetic background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
-
-.placeholder-text {
-    color: #8c8c8c;
-    font-family: 'Geist', sans-serif;
+    color: #e0e0e0 !important;
     font-size: 14px;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
-}
-/* Projects Section Styling */
-.projects-grid {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px; /* Har project block ke beech ka aesthetic gap */
-    width: 100%;
-}
-
-.project-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.project-image-placeholder {
-    width: 100%;
-    height: 550px; /* Badi clean visual presentation ke liye */
-    background-color: #eae7e2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    color: #8c8c8c;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.project-info {
-    display: flex;
-    align-items: baseline;
-    gap: 15px;
     margin-top: 5px;
 }
 
-.project-number {
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
-    font-style: italic;
-    color: #8c8c8c;
+.hero-content-shifted .one-line-desc {
+    font-family: 'Geist', sans-serif;
+    color: #cccccc !important;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 95%;
+    margin: 0;
 }
 
-.project-title {
-    font-family: 'EB Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: #1a1a1a;
-}
-
-.project-category {
-    font-size: 14px;
-    color: #707070;
-    margin-left: auto; /* Category ko right side par push karne ke liye */
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Responsive adjustment for projects */
-@media (max-width: 768px) {
-    .project-image-placeholder {
-        height: 350px;
-    }
-    .project-info {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .project-category {
-        margin-left: 0;
-    }
-}
-/* Recent Work Section Styling with Background Image Support */
+/* --- MY PROJECTS SECTION --- */
 .recent-work-section {
-    margin-top: 150px;
     width: 100%;
+    margin-top: 40px;
 }
 
-.section-heading {
-    font-family: 'EB Garamond', serif;
-    font-size: 36px;
-    font-weight: 400;
-    letter-spacing: -1px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+.section-heading-centered {
+      font-family: 'EB Garamond', serif;
+      font-size: 42px;            /* Size bada kar diya */
+      font-weight: 800;           /* Bold kiya */
+      text-transform: uppercase;  /* Capital letters */
+      letter-spacing: 3px;
+      color: #1a1a1a;
+      text-align: center;         /* Heading center mein aa gayi */
+      margin-top: 80px;
+      margin-bottom: 60px;
+  }
+.recent-work-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;      /* Width ko thoda sa barha diya (Pehle 1000px thi) */
+    margin: 0 auto;
 }
 
 .recent-project-card {
     width: 100%;
-    margin-bottom: 50px;
-    position: relative;
+    height: 500px;          /* Height ko bhi thoda aur increase kar diya (Pehle 580px thi) */
     border-radius: 12px;
     overflow: hidden;
 }
 
 .recent-project-image {
     width: 100%;
-    height: 500px;
-    background-color: #1c1a17; /* Solid dark background jab tak image nahi aati */
+    height: 100%; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform 0.4s ease;
+    align-items: center; /* Content vertically center */
+    justify-content: center; /* Content horizontally center */
+    position: relative;
+}
+.recent-project-card:hover .recent-project-image {
+    transform: scale(1.05); /* Hover karne par image smooth zoom hogi */
 }
 
-.recent-project-card:hover .recent-project-image {
-    transform: scale(1.01);
+/* Dark Tint Overlay for Projects */
+.recent-project-image::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); 
+    z-index: 1;
+}
+
+.project-overlay-text {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    padding: 0 20px;
 }
 
 .project-overlay-text h3 {
     font-family: 'EB Garamond', serif;
-    font-size: 42px;
-    color: #ffffff;
+    font-size: 46px;
+    color: #ffffff !important;
     font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.project-overlay-text p {
-    font-family: 'Geist', sans-serif;
-    font-size: 14px;
-    color: #cccccc;
-    letter-spacing: 1px;
-    line-height: 1.8;
-}
-
-/* Footer & Let's Connect Styling */
-.footer-section {
-    margin-top: 150px;
-    width: 100%;
-}
-
-.connect-box {
-    width: 100%;
-    background-color: #4d4a3a; 
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40px;
-    margin-bottom: 80px;
-}
-
-.connect-button {
-    font-family: 'Geist', sans-serif;
-    font-size: 16px;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 500;
-    padding: 15px 40px;
-    transition: letter-spacing 0.3s ease;
-}
-
-.connect-box:hover .connect-button {
-    letter-spacing: 4px;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 40px;
-    border-top: 1px solid #eae7e2;
-    padding-top: 40px;
-}
-
-.footer-name {
-    font-family: 'EB Garamond', serif;
-    font-size: 24px;
-    letter-spacing: 1px;
-    color: #1a1a1a;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #707070;
-    font-size: 15px;
-    margin-left: 25px;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #1a1a1a;
-}
-
-@media (max-width: 768px) {
-    .recent-project-image {
-        height: 350px;
-    }
-    .project-overlay-text h3 {
-        font-size: 28px;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .footer-links a {
-        margin: 0 10px;
-    }
-}
-/* ==========================================================================
-   Work Page Specific Layout Styling
-   ========================================================================== */
-
-/* Top Big Hero Banner */
-.work-hero-banner {
-    width: 100%;
-    height: 380px;
-    background-color: #1c1a17; /* Fallback theme dark color */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    margin-top: 20px;
-    border-radius: 4px;
-}
-
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Soft premium shadow dims */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-title-large {
-    font-family: 'EB Garamond', serif;
-    font-size: 90px;
-    font-weight: 400;
-    color: #ffffff;
-    letter-spacing: 6px;
-    text-transform: uppercase;
     margin: 0;
+    letter-spacing: 1px;
 }
 
-/* Section Centered Headings */
-.section-heading-centered {
-    font-family: 'EB Garamond', serif;
-    font-size: 38px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 120px;
-    margin-bottom: 60px;
-    text-transform: uppercase;
-    color: #1a1a1a;
-}
-
-/* Past Work 2-Column Grid Layout */
-.past-work-section {
-    width: 100%;
-    margin-top: 60px;
-}
-
-.past-work-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Exact 2 columns side-by-side */
-    gap: 30px; /* Aesthetic gaps between cards */
-    width: 100%;
-}
-
-.past-project-card {
-    width: 100%;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.past-project-image {
-    width: 100%;
-    height: 480px; /* Square/Vertical ratio matching screens */
-    background-color: #2b2924;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    transition: transform 0.4s ease;
-}
-
-.past-project-card:hover .past-project-image {
-    transform: scale(1.01);
+.project-tags {
+    font-family: 'Geist', sans-serif;
+    font-size: 13px;
+    color: #dddddd !important;
+    letter-spacing: 1px;
+    margin-top: 12px;
 }
 
 .project-year {
-    margin-top: 8px !important;
-    opacity: 0.8;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+    color: #aaaaaa !important;
+    margin-top: 15px;
+    font-style: italic;
 }
 
-/* Work Pages Responsive Breakpoints */
-@media (max-width: 900px) {
-    .hero-title-large {
-        font-size: 60px;
-        letter-spacing: 4px;
-    }
-    .work-hero-banner {
-        height: 280px;
-    }
-    .past-work-grid {
-        grid-template-columns: 1fr; /* Switch to 1 column on mobile screen */
-    }
-    .past-project-image {
-        height: 380px;
-    }
+/* --- PREMIUM FOOTER STYLING (HAROON WASEEM STYLE) --- */
+
+.main-premium-footer {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 1. Top Section - Dark Background */
+.footer-top-dark {
+    width: 100%;
+    background-color: #1e221f; /* Premium dark tint */
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Capsule Shaped LET'S CONNECT Button */
+.haroon-style-btn {
+    display: inline-block;
+    padding: 18px 80px;
+    background-color: #83764d; /* Khaki/Olive Green button color */
+    color: #ffffff !important;
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 50px; /* Capsule shape */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.haroon-style-btn:hover {
+    transform: scale(1.05);
+    background-color: #948558;
+}
+
+/* 2. Bottom Section - Light Grey Panel */
+.footer-bottom-light {
+    width: 100%;
+    background-color: #e5e5e5; /* Light grey background */
+    padding: 50px 0;
+}
+
+.footer-light-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between; /* Name left par aur info right par push karega */
+    align-items: center;
+}
+
+/* Left Side Big Name */
+.footer-brand-name {
+    font-family: 'Geist', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Right Side Wrapper */
+.footer-right-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Email Style */
+.footer-email {
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Social Icon Box */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1a1a1a;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-family: 'Geist', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-social-icons a:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
 }

@@ -14,113 +14,125 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header Section -->
+    <!-- 1. UPDATED LOGO & NAVBAR (As per Point 5 & 7) -->
     <header class="navbar">
-        <div class="logo"></div>
-        <div class="nav-links">
-            <a href="index.html" class="active">About me</a>
-            <a href="work.html">Work</a>
-            <a href="resume.html">Resume</a>
-            <a href="#contact">Contact</a>
-        </div>
+      <div class="custom-logo">
+        <span class="logo-ms">MS</span>
+        <span class="logo-divider-line">|</span>
+        <span class="logo-name">Muhammad Saad</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">HOME</a>
+        <a href="work.html">PROJECTS</a>
+        <a href="#about">ABOUT ME</a>
+        <!-- Iska link baad mein adjust kar lenge -->
+        <a href="contact.html">GET IN TOUCH</a>
+      </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main class="hero-container">
-      <h1 class="main-title">MUHAMMAD SAAD</h1>
-      <p class="subtitle">Mechanical Engineer</p>
-    </main>
-
-    <!-- About Me Section -->
-    <section class="about-section">
-      <div class="about-text">
-        <p>
-          Welcome to my space. I am a Mechanical Engineer passionate about
-          designing efficient systems, working with core engineering principles,
-          and solving complex technical problems.
-        </p>
-        <p>
-          With a focus on precision and innovation, my work spans from initial
-          concepts and 3D modeling to practical execution and optimization.
-        </p>
+    <!-- HERO SECTION -->
+    <section class="hero-section-new">
+      <div class="hero-bg-image">
+        <img src="saad-bg.jpeg" alt="Muhammad Saad Background" class="bg-img" />
       </div>
-      <div class="about-image-container">
-            <div class="about-image" style="background-image: url('');">
-                <span class="placeholder-text">Image Placeholder</span>
-            </div>
-        </div>
+
+      <div class="hero-content-shifted">
+        <h1 class="main-title">MUHAMMAD SAAD</h1>
+        <p class="main-subtitle">Mechanical Engineer</p>
+        <p class="one-line-desc">
+          Detail-oriented engineer designing efficient mechanical systems,
+          combining strong analytical principles with simulation and fluid
+          modern execution.
+        </p>
       </div>
     </section>
 
-    <!-- RECENT WORK SECTION (3 Projects - Image Ready) -->
+    <!-- MY PROJECTS SECTION -->
     <section class="recent-work-section">
-      <h2 class="section-heading">RECENT WORK</h2>
+      <h2 class="section-heading-centered">MY PROJECTS</h2>
 
-      <!-- Project 1: Baad mein image lagane ke liye url('saad1.jpg') likh dena -->
-      <div class="recent-project-card">
-        <div
-          class="recent-project-image"
-          style="
-            background-image:
-              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-              url(&quot;&quot;);
-          "
-        >
-          <div class="project-overlay-text">
-            <h3>PROJECT APEX</h3>
-            <p>Generative Design • FEA • CAM • CNC Machining<br />2026</p>
+      <div class="recent-work-grid">
+        <!-- PROJECT 1: APEX -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;project-apex.jpg&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>PROJECT APEX</h3>
+              <p class="project-tags">
+                Generative Design • FEA • CAM • CNC Machining
+              </p>
+              <p class="project-year">2025</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="recent-project-card">
-        <div
-          class="recent-project-image"
-          style="
-            background-image:
-              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-              url(&quot;&quot;);
-          "
-        >
-          <div class="project-overlay-text">
-            <h3>PROJECT HELIX</h3>
-            <p>3D CAD Modeling • Thermal Simulation • Optimization<br />2025</p>
+        <!-- PROJECT 2: HELIX -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;project-helix.jpg&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>PROJECT HELIX</h3>
+              <p class="project-tags">
+                Generative Design • FEA • CAM • CNC Machining
+              </p>
+              <p class="project-year">2024</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="recent-project-card">
-        <div
-          class="recent-project-image"
-          style="
-            background-image:
-              linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
-              url(&quot;&quot;);
-          "
-        >
-          <div class="project-overlay-text">
-            <h3>TYPHEON</h3>
-            <p>
-              Design for Manufacturing • Fixture Design • CAM • CNC Machining<br />2024
-            </p>
+        <!-- PROJECT 3: TYPHEON -->
+        <div class="recent-project-card">
+          <div
+            class="recent-project-image"
+            style="background-image: url(&quot;project-typheon.jpg&quot;)"
+          >
+            <div class="project-overlay-text">
+              <h3>TYPHEON</h3>
+              <p class="project-tags">
+                Design for Manufacturing • Fixture Design • CAM • CNC Machining
+              </p>
+              <p class="project-year">2023</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER / LET'S CONNECT SECTION -->
-    <footer class="footer-section" id="contact">
-      <div class="connect-box">
-        <a href="mailto:saad@email.com" class="connect-button">LET'S CONNECT</a>
+    <!-- FOOTER SECTION -->
+    <!-- Main Footer Wrapper -->
+    <footer class="main-premium-footer">
+      <!-- 1. Top Dark Section (LET'S CONNECT) -->
+      <div class="footer-top-dark">
+        <a href="contact.html" class="haroon-style-btn">LET'S CONNECT</a>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-name">MUHAMMAD SAAD</div>
-        <div class="footer-links">
-          <a href="mailto:saad@email.com">saad@email.com</a>
-          <a href="#" target="_blank">LinkedIn</a>
-          <a href="#" target="_blank">Instagram</a>
+
+      <!-- 2. Bottom Light Section (Name & Info) -->
+      <div class="footer-bottom-light">
+        <div class="footer-light-container">
+          <!-- Left Side Name -->
+          <h2 class="footer-brand-name">MUHAMMAD SAAD</h2>
+
+          <!-- Right Side Info & Links -->
+          <div class="footer-right-info">
+            <!-- Saad's Real Email -->
+            <a href="mailto:muhammadsaad.e13@gmail.com" class="footer-email"
+              >muhammadsaad.e13@gmail.com
+            </a>
+
+            <div class="footer-social-icons">
+              <!-- Saad's Real LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/muhammad-saad-352a62182/"
+                target="_blank"
+                title="LinkedIn"
+                >LN</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </footer>
