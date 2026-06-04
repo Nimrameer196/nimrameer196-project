@@ -275,40 +275,58 @@ body {
     flex-direction: column;
 }
 
-/* 1. Top Section - Dark Background */
+/* ==========================================================================
+   🌟 HAROON WASEEM STYLE PREMIUM FOOTER (UPDATED CLASS)
+   ========================================================================== */
+
+/* 1. Top Section - Bilkul screen se laga hua full width black background */
 .footer-top-dark {
-    width: 100%;
-    background-color: #1e221f; /* Premium dark tint */
-    padding: 100px 0;
+    width: 100vw;                      /* Screen ki poori width lene ke liye */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;               /* Body ki padding break karke screen se chipkane ke liye */
+    
+    background-color: #1a1917 !important; /* Haroon ki website jaisa dark premium tint */
+    padding: 140px 0;                  
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 !important;       /* Corners bilkul sharp */
 }
 
-/* Capsule Shaped LET'S CONNECT Button */
+/* 2. Proper Big Capsule Button (New Style Class) */
 .new-style-btn {
-    display: inline-block;
-    padding: 18px 80px;
-    background-color: #83764d; /* Khaki/Olive Green button color */
-    color: #ffffff !important;
-    font-family: 'Geist', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-decoration: none;
-    border-radius: 50px; /* Capsule shape */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block !important;
+    background-color: #8c7953 !important; /* Exact Khaki/Olive Green rang */
+    color: #ffffff !important;            /* Text pure white */
+    font-family: 'Geist', sans-serif !important;  
+    font-size: 20px !important;           /* Proper bada aur saaf text */
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;       /* Letters ke darmiyan gap */
+    text-decoration: none !important;
+    
+    /* Button ka size aur round capsule shape */
+    padding: 22px 90px !important;        
+    border-radius: 60px !important;       /* Pill shape rounded corners */
+    border: none !important;              
+    
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
+/* Button Hover Animation */
 .new-style-btn:hover {
-    transform: scale(1.05);
-    background-color: #948558;
+    transform: scale(1.04) translateY(-2px) !important; /* Hover par smoothly thoda bada hoga */
+    background-color: #766544 !important;                /* Rang thoda sa dark click feel ke liye */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important; /* Shadow effect */
 }
 
-/* 2. Bottom Section - Light Grey Panel */
+/* 3. Bottom Section - Spacing & Clean Layout */
 .footer-bottom-light {
     width: 100%;
-    background-color: #e5e5e5; /* Light grey background */
+    background-color: #e5e5e5;
     padding: 50px 0;
 }
 
@@ -317,60 +335,71 @@ body {
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
-    justify-content: space-between; /* Name left par aur info right par push karega */
+    justify-content: space-between;
     align-items: center;
 }
 
-/* Left Side Big Name */
-.footer-brand-name {
-    font-family: 'Geist', sans-serif;
-    font-size: 32px;
-    font-weight: 500;
-    color: #1a1a1a;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-/* Right Side Wrapper */
-.footer-right-info {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-/* Email Style */
-.footer-email {
-    font-family: 'Geist', sans-serif;
-    font-size: 14px;
-    color: #1a1a1a;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-/* Social Icon Box */
+/* Email aur LinkedIn icon ke darmiyan gap */
 .footer-social-icons {
     display: flex;
     gap: 15px;
+    margin-left: 35px; /* Is se LN icon email wale link se door hat jayega */
+}
+/* ==========================================================================
+   🌟 LIGHT FOOTER FIX (Email aur LinkedIn Alignment)
+   ========================================================================== */
+
+/* Email aur LN dono ko ek horizontal line mein seedha lane ke liye */
+.footer-right-info {
+    display: flex !important;
+    flex-direction: row !important;   /* Forcefully ek line mein karne ke liye */
+    align-items: center !important;   /* Vertically bilkul center alignment */
+    gap: 40px !important;              /* Email aur LinkedIn ke darmiyan professional gap */
 }
 
+/* Email link se faltu lines aur blue color hatane ke liye */
+.footer-email {
+    text-decoration: none !important;  /* Underline khatam */
+    color: #1a1a1a !important;         /* Premium dark black color */
+    font-family: 'Geist', sans-serif !important;
+    font-size: 16px !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-email:hover {
+    color: #8c7953 !important;         /* Hover karne par khaki rang ho jaye */
+}
+
+/* LinkedIn (LN) icon button ko khubsoorat aur line se pak karne ke liye */
 .footer-social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #1a1a1a;
-    color: #1a1a1a;
-    text-decoration: none;
-    font-family: 'Geist', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none !important;  /* Underline khatam */
+    color: #1a1a1a !important;         /* Black text */
+    font-family: 'Geist', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border: 1px solid #1a1a1a !important; /* Chota sa neat border box */
+    padding: 8px 12px !important;      /* Box ke andar spacing */
+    border-radius: 4px !important;     /* Halka sa rounded edge */
+    transition: all 0.3s ease !important;
 }
 
 .footer-social-icons a:hover {
-    background-color: #1a1a1a;
-    color: #ffffff;
+    background-color: #1a1a1a !important; /* Hover par solid black background */
+    color: #ffffff !important;            /* Text white ho jaye */
+}
+/* ==========================================================================
+   🌟 GREY FOOTER FULL-WIDTH & BOTTOM STICKY FIX
+   ========================================================================== */
+
+.footer-bottom-light {
+    width: 100vw !important;            /* 🌟 Screen ki poori width lene ke liye */
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;     /* 🌟 Body ki left/right padding ko tor kar sides se chipkane ke liye */
+    
+    margin-bottom: -40px !important;    /* 🌟 Body ki bottom padding (40px) ko khatam karke bilkul neche chipkane ke liye */
+    background-color: #e5e5e5 !important;
+    padding: 50px 0 !important;
 }
