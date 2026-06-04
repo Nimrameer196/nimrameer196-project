@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #fcfbf9; /* Ek halka, warm-white background jo premium lagta hai */
+    background-color: #fcfbf9; 
     color: #1a1a1a;
     font-family: 'Geist', sans-serif;
     min-height: 100vh;
@@ -17,7 +17,7 @@ body {
 /* Header Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Logo ko left par aur links ko right par push karega */
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
     padding: 30px 0;
@@ -37,7 +37,7 @@ body {
 .logo-ms {
     font-family: 'EB Garamond', serif;
     font-size: 34px;
-    font-weight: 800; /* Saad's Requirement: MS fully bold */
+    font-weight: 800; 
     letter-spacing: 1px;
     color: #1a1a1a;
 }
@@ -45,8 +45,8 @@ body {
 .logo-divider-line {
     font-size: 30px;
     color: #1a1a1a;
-    font-weight: 700; /* Saad's Requirement: Vertical line divider bold */
-    margin-top: -4px; /* Text ke sath perfect center alignment ke liye */
+    font-weight: 700; 
+    margin-top: -4px; 
 }
 
 .logo-name {
@@ -100,15 +100,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Background image peeche rahegi */
+    z-index: 0; 
 }
 
 .bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%; /* Image ko thoda upar shift karne ke liye */
-    opacity: 0.65; /* Black frame ke sath blend karne ke liye opacity adjust ki */
+    object-position: center 15%; 
+    opacity: 0.65; 
 }
 
 .hero-content-shifted {
@@ -173,13 +173,13 @@ body {
     flex-direction: column;
     gap: 50px;
     width: 100%;
-    max-width: 1000px;      /* Width ko thoda sa barha diya (Pehle 1000px thi) */
+    max-width: 1000px;     
     margin: 0 auto;
 }
 
 .recent-project-card {
     width: 100%;
-    height: 500px;          /* Height ko bhi thoda aur increase kar diya (Pehle 580px thi) */
+    height: 500px;          
     border-radius: 12px;
     overflow: hidden;
 }
@@ -243,7 +243,7 @@ body {
     font-style: italic;
 }
 
-/* --- PREMIUM FOOTER STYLING (HAROON WASEEM STYLE) --- */
+/* --- PREMIUM FOOTER STYLING  --- */
 
 .main-premium-footer {
     width: 100%;
@@ -263,7 +263,7 @@ body {
 }
 
 /* Capsule Shaped LET'S CONNECT Button */
-.haroon-style-btn {
+.new-style-btn {
     display: inline-block;
     padding: 18px 80px;
     background-color: #83764d; /* Khaki/Olive Green button color */
@@ -277,7 +277,7 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.haroon-style-btn:hover {
+.new-style-btn:hover {
     transform: scale(1.05);
     background-color: #948558;
 }
