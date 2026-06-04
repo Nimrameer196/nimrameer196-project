@@ -259,7 +259,7 @@ body {
 }
 
 .project-year {
-    font-family: 'EB Garamond', serif;
+    font-family: 'Geist', sans-serif;
     font-size: 18px;
     color: #aaaaaa !important;
     margin-top: 15px;
@@ -274,10 +274,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-/* ==========================================================================
-   🌟 HAROON WASEEM STYLE PREMIUM FOOTER (UPDATED CLASS)
-   ========================================================================== */
 
 /* 1. Top Section - Bilkul screen se laga hua full width black background */
 .footer-top-dark {
@@ -301,7 +297,7 @@ body {
     display: inline-block !important;
     background-color: #8c7953 !important; /* Exact Khaki/Olive Green rang */
     color: #ffffff !important;            /* Text pure white */
-    font-family: 'Geist', sans-serif !important;  
+    font-family: 'EB Garamond', serif !important;  
     font-size: 20px !important;           /* Proper bada aur saaf text */
     font-weight: 500 !important;
     text-transform: uppercase !important;
@@ -402,4 +398,58 @@ body {
     margin-bottom: -40px !important;    /* 🌟 Body ki bottom padding (40px) ko khatam karke bilkul neche chipkane ke liye */
     background-color: #e5e5e5 !important;
     padding: 50px 0 !important;
+}
+/* ==========================================================================
+   🌟 PREMIUM FOOTER ICONS STYLING
+   ========================================================================== */
+
+/* Icons ko ek seedhi line mein lane ke liye */
+.footer-right-info-icons {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;              /* Icons ke darmiyan professional gap */
+}
+
+/* Har icon button ka basic style (Circular shape aur clean look) */
+.icon-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;     /* Bilkul gol (Circle) banane ke liye */
+    background-color: #ffffff !important; /* Shuru mein background white hoga */
+    border: 1px solid #1a1a1a !important; /* Halka black border */
+    color: #1a1a1a !important;         /* Icon ka rang shuru mein black */
+    font-size: 18px !important;        /* Icon ka size */
+    text-decoration: none !important;
+    transition: all 0.3s ease !important; /* Smooth animation effect */
+}
+
+/* Hover effects - Jab mouse upar le kar jayein */
+.gmail-icon:hover {
+    background-color: #db4437 !important; /* Gmail Red */
+    color: #ffffff !important;
+    border-color: #db4437 !important;
+}
+
+.whatsapp-icon:hover {
+    background-color: #25D366 !important; /* WhatsApp Green */
+    color: #ffffff !important;
+    border-color: #25D366 !important;
+}
+
+.linkedin-icon:hover {
+    background-color: #0077b5 !important; /* LinkedIn Blue */
+    color: #ffffff !important;
+    border-color: #0077b5 !important;
+}
+/* 🌟 Footer Brand Name Font Fix */
+.footer-brand-name {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 32px !important;           /* Proper professional size */
+    font-weight: 700 !important;          /* Elegant bold look */
+    letter-spacing: 1px !important;       /* Clean spacing */
+    color: #1a1a1a !important;
 }
