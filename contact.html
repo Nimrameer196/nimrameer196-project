@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get In Touch | Muhammad Saad</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    style="background-color: #ffffff; margin: 0; padding: 0; min-height: 100vh"
+  >
+    <!-- 1. UNIFIED PREMIUM NAVBAR -->
+    <header class="navbar">
+      <div class="custom-logo" onclick="window.location.href = 'index.html'">
+        <span class="logo-ms">MS</span>
+        <span class="logo-divider-line">|</span>
+        <span class="logo-name">Muhammad Saad</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="work.html">PROJECTS</a>
+        <a href="about.html">ABOUT ME</a>
+        <a href="contact.html" class="active">GET IN TOUCH</a>
+      </nav>
+    </header>
+
+    <!-- 2. CONTACT MAIN SECTION -->
+    <main class="contact-main-wrapper">
+      <div class="contact-container">
+        <!-- Left Side: Information -->
+        <div class="contact-info-panel">
+          <h1 class="contact-title">Let's Connect</h1>
+          <p class="contact-subtitle">
+            Have a project in mind or looking to collaborate? Drop a message!
+          </p>
+
+          <div class="info-meta-list">
+            <div class="meta-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <span>Call / WhatsApp</span>
+                <a href="https://wa.me/923362835568" target="_blank"
+                  >+92 336 2835568</a
+                >
+              </div>
+            </div>
+
+            <div class="meta-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span>Email Address</span>
+                <a href="mailto:muhammadsaad.e13@gmail.com"
+                  >muhammadsaad.e13@gmail.com</a
+                >
+              </div>
+            </div>
+
+            <!-- Naya LinkedIn Block Jo Saad Ne Maanga Tha -->
+            <div class="meta-item">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <div>
+                <span>Professional Network</span>
+                <a
+                  href="https://www.linkedin.com/in/muhammadsaad-352a62182/"
+                  target="_blank"
+                  >Connect on LinkedIn</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Clean Form -->
+        <div class="contact-form-panel">
+          <!-- Note: Baad mein hum is action URL ko actual Formspree endpoint se jor denge -->
+          <form
+            action="https://formspree.io/f/sample"
+            method="POST"
+            enctype="multipart/form-data"
+            class="premium-contact-form"
+          >
+            <div class="form-group">
+              <label for="username">Your name</label>
+              <input
+                type="text"
+                id="username"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="useremail">Email</label>
+              <input
+                type="email"
+                id="useremail"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="userwhatsapp"
+                >Where you know us from? (WhatsApp/Platform)</label
+              >
+              <input
+                type="text"
+                id="userwhatsapp"
+                name="source_whatsapp"
+                placeholder="e.g. WhatsApp, LinkedIn, Upwork"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="usermessage">Message</label>
+              <textarea
+                id="usermessage"
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-form-footer">
+              <!-- Custom File Attachment Button -->
+              <div class="file-upload-wrapper">
+                <label for="file-attachment" class="file-drop-btn">
+                  <i class="fa-solid fa-paperclip"></i> Attach File
+                </label>
+                <input type="file" id="file-attachment" name="attachment" />
+              </div>
+
+              <!-- Submit Button Matching Screenshot -->
+              <button type="submit" class="orange-submit-btn">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
