@@ -611,7 +611,6 @@ body {
     padding: 10px 0;
 }
 
-/* Pure Saad Ke Screenshot Jaisa Orange Button */
 .orange-submit-btn {
     font-family: 'Geist', sans-serif;
     background-color: #ff5722 !important; /* Premium Vibrant Orange */
@@ -623,6 +622,11 @@ body {
     border-radius: 6px !important;
     cursor: pointer !important;
     transition: background-color 0.2s ease !important;
+    
+    /* Ye 3 lines center aur gap ke liye hain: */
+    display: block;
+    margin: 20px auto 0 auto; 
+    width: fit-content; 
 }
 
 .orange-submit-btn:hover {
