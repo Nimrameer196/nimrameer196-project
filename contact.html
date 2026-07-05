@@ -68,7 +68,6 @@
               </div>
             </div>
 
-            <!-- Naya LinkedIn Block Jo Saad Ne Maanga Tha -->
             <div class="meta-item">
               <i class="fa-brands fa-linkedin-in"></i>
               <div>
@@ -83,76 +82,72 @@
           </div>
         </div>
 
-        <!-- Right Side: Clean Form -->
+        <!-- Right Side: Clean UI Preview that links to Google Form -->
         <div class="contact-form-panel">
-          <!-- Note: Baad mein hum is action URL ko actual Formspree endpoint se jor denge -->
-          <form
-            action="https://formspree.io/f/sample"
-            method="POST"
-            enctype="multipart/form-data"
-            class="premium-contact-form"
-          >
+          <div class="premium-contact-form">
             <div class="form-group">
-              <label for="username">Your name</label>
+              <label>Your name</label>
               <input
                 type="text"
-                id="username"
-                name="name"
                 placeholder="Your Name"
-                required
+                disabled
+                style="cursor: not-allowed"
               />
             </div>
 
             <div class="form-group">
-              <label for="useremail">Email</label>
+              <label>Email</label>
               <input
                 type="email"
-                id="useremail"
-                name="email"
                 placeholder="Your Email"
-                required
+                disabled
+                style="cursor: not-allowed"
               />
             </div>
 
             <div class="form-group">
-              <label for="userwhatsapp"
-                >Where you know us from? (WhatsApp/Platform)</label
-              >
+              <label>Where you know us from? (WhatsApp/Platform)</label>
               <input
                 type="text"
-                id="userwhatsapp"
-                name="source_whatsapp"
                 placeholder="e.g. WhatsApp, LinkedIn, Upwork"
-                required
+                disabled
+                style="cursor: not-allowed"
               />
             </div>
 
             <div class="form-group">
-              <label for="usermessage">Message</label>
+              <label>Message</label>
               <textarea
-                id="usermessage"
-                name="message"
                 rows="5"
                 placeholder="Your Message"
-                required
+                disabled
+                style="cursor: not-allowed"
               ></textarea>
             </div>
 
             <div class="form-form-footer">
-              <!-- Custom File Attachment Button -->
               <div class="file-upload-wrapper">
-                <label for="file-attachment" class="file-drop-btn">
-                  <i class="fa-solid fa-paperclip"></i> Attach File
-                </label>
-                <input type="file" id="file-attachment" name="attachment" />
+                <span
+                  class="file-drop-btn"
+                  style="color: #999; cursor: not-allowed"
+                >
+                  <i class="fa-solid fa-paperclip"></i> Attach File (On Google
+                  Form)
+                </span>
               </div>
 
-              <!-- Submit Button Matching Screenshot -->
-              <button type="submit" class="orange-submit-btn">
-                Send Message
-              </button>
+              <!-- Yeh Button direct unke Google Form par le jaye ga -->
+              <!-- Abhi isme dummy link hai, jab Saad apna link dein to href="..." ke andar paste kar dena -->
+              <a
+                href="https://docs.google.com/forms/"
+                target="_blank"
+                class="orange-submit-btn"
+                style="text-decoration: none; text-align: center"
+              >
+                Open Google Form
+              </a>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </main>

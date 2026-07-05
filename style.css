@@ -637,3 +637,30 @@ body {
         padding: 0 20px;
     }
 }
+/* --- VIEW ALL BUTTON STYLING --- */
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Projects grid aur button ke darmiyan gap */
+    margin-bottom: 20px;
+}
+
+.view-all-btn {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+    text-decoration: none;
+    padding: 14px 40px;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    cursor: pointer;
+}
