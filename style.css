@@ -583,7 +583,7 @@ body {
 .form-group input:focus, 
 .form-group textarea:focus {
     outline: none;
-    border-color: #ff5722; /* Focus hone par orange tint */
+    border-color: #8c7953 ; /* Focus hone par orange tint */
     background-color: #ffffff;
 }
 
@@ -613,7 +613,7 @@ body {
 
 .orange-submit-btn {
     font-family: 'Geist', sans-serif;
-    background-color: #ff5722 !important; /* Premium Vibrant Orange */
+    background-color: #8c7953 !important; /* Premium Vibrant Orange */
     color: #ffffff !important;
     border: none !important;
     padding: 14px 36px !important;
@@ -630,7 +630,7 @@ body {
 }
 
 .orange-submit-btn:hover {
-    background-color: #e64a19 !important; /* Halka sa dark tone hover par */
+    background-color:#6b5b3d !important; /* Halka sa dark tone hover par */
 }
 
 /* Responsive Setting for Small Screens */
@@ -667,4 +667,333 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
     cursor: pointer;
+}
+/* About page ke title ko Projects page jaisa banane ke liye */
+.about-hero h1 {
+    font-family: 'EB Garamond', serif !important; /* Wahi font jo MY PROJECTS ka hai */
+    font-size: 42px !important;                 /* Sahi size */
+    text-transform: uppercase;                 /* Agar MY PROJECTS uppercase mein hai */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.about-hero p {
+    font-size: 18px !important;      /* Paragraph ka size barha diya */
+    color: #444 !important;       /* Thoda dark color taake parhne mein asaan ho */
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about-main-wrapper {
+    /* 180px ko tab tak adjust karein jab tak gap 'work.html' jaisa na ho jaye */
+    padding-top: 80px !important; 
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* --- About Page Stats Grid --- */
+.stats-grid {
+    display: grid;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    grid-template-columns: repeat(4, 1fr); /* 4 horizontal boxes */
+    gap: 50px;
+    padding: 40px 5%;
+    background-color: #ffffff; /* black background */
+}
+
+.stat-card {
+    text-align: center;
+    border: none; /* Border boxes ke liye */
+     box-shadow: 0 10px 20px rgb(24, 27, 12); /* Halki si shadow */
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Text upar, number neeche */
+    transition: transform 0.3s ease; /* Hover effect ke liye */
+    border-radius: 8px;
+    
+}
+.stat-card:hover {
+    transform: translateY(-5px); /* Hover karne par box thoda upar uthega */
+    box-shadow: 0 10px 20px rgb(24, 27, 12); /* Halki si shadow */
+}
+.stat-text {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700; /* Text ko bold kiya */
+    font-family: 'EB Garamond', serif; /* Title wala font style apply kiya */
+}
+
+.stat-number {
+    font-size: 15px;
+    color: #000000;
+    margin: 0;
+    font-weight: 400; /* Numbers ko simple/light rakha taake text highlight ho */
+}
+
+/* --- Expertise Section Layout --- */
+.expertise-content {
+    padding: 60px 10%;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns mein split */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.exp-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.exp-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .stats-grid, .expertise-grid {
+        grid-template-columns: 1fr; /* Mobile par 1 column */
+    }
+}
+.professional-profile {
+    padding: 60px 10%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; /* Text ko center karne ke liye */
+}
+
+.professional-profile h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.professional-profile p {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 25px;
+    max-width: 800px;          /* Text line ko zyada lamba hone se roke ga */
+    margin-left: auto;         /* Center align */
+    margin-right: auto;
+}
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    /* Yeh line box expansion ka masla hal kar degi */
+    align-items: stretch; 
+}
+.exp-box {
+    border: none; /* Border ko hata diya */
+    box-shadow: 0 4px 15px rgba(24, 27, 12, 1.0); /* Soft premium shadow */
+    padding: 30px;              /* Thoda zyada space */
+    background: #ffffff; /* White background */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Halki si round edges */
+    height: 100%; /* Box height ko equal rakhe */
+    display: flex;
+    border-left: 5px solid #313526; 
+    flex-direction: column;
+    justify-content: center; /* Text ko center align karne ke liye */
+    min-height: 120px; /* Aap ise apni marzi se adjust kar sakti hain */
+}
+/* Jab box par mouse jaye toh thoda highlight ho */
+.exp-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(24, 27, 12, 1.0);
+}
+.expertise-section h2 {
+    font-family: 'EB Garamond', serif !important; /* Wahi font jo Professional Profile ka hai */
+    font-size: 32px !important;                 /* Professional Profile heading size ke barabar */
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+}
+.exp-content {
+    margin-top: 20px;
+    border-top: 1px solid #f0f0f0; /* Ek halki si line content ke upar */
+    display: none; /* Default mein text chhupa hua hai */
+    padding-top: 20px;
+    color: #666;
+    
+}
+/* Paragraph (Content) ki styling */
+.exp-content p {
+    font-size: 16px;            /* Professional Profile paragraph ke size se match */
+    font-family: 'Geist', sans-serif; /* Wahi font style */
+    line-height: 1.8;
+    color: #666;
+    margin-top: 10px;
+}
+
+.toggle-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 20px;            /* Professional Profile heading ke size se match */
+    font-family: 'EB Garamond', serif; /* Wahi font style */
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    padding: 0; /* Extra space khatam */
+    outline: none;
+}
+.toggle-btn span {
+    font-family: 'Geist', sans-serif !important;
+    font-size: 20px;          /* Sign ka size barha diya */
+    font-weight: 300;        /* Sign ko bold aur clear kiya */
+    color: #333;              /* Color ko dark rakha */
+    background: #988764; /* Halki orange background */
+    width: 30px;
+    height: 30px;
+    line-height: 2;           /* Align karne ke liye */
+    margin-left: 10px;        /* Text aur sign ke darmiyan gap */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Circle shape */
+    margin-left: 15px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+}
+/* Hover effect */
+.toggle-btn:hover span {
+    background: #1a1917; /* Darker background on hover */
+    color: #fff;
+}
+.technical-competencies {
+    padding: 60px 20%;
+    background-color: #f9f9f9; /* Halka grey background taake ye section alag lage */
+
+}
+/* Technical Competencies heading ki styling */
+.technical-competencies h2 {
+    font-family: 'EB Garamond', serif !important; /* Sub-headings wala font */
+    font-size: 32px !important;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px; /* Ye margin sub-headings ke sath gap barha dega */
+}
+
+.competency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Teen columns */
+    gap: 100px;
+    row-gap: 30px;
+    align-items: start;
+    
+}
+.comp-box h3 {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 24px !important;
+    margin-bottom: 25px;
+    color: #333; /* Saad ka signature orange color */
+    text-align: center;
+    font-weight: 700;
+}
+
+.comp-box ul {
+    list-style: none; /* Bullet points hataye */
+    padding: 0;
+}
+
+.comp-box ul li {
+    font-family: 'Geist', sans-serif;
+    font-size: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-weight: 300;
+}
+.comp-box ul li span { 
+    color: #1a1a1a;
+     margin-right: 10px; 
+     font-weight: bold;
+     }
+     .additional-info {
+    padding: 80px 10%;
+    background-color: #ffffff; /* Clean white background */
+}
+
+.info-grid {
+    display: grid;
+    /* 3 columns ki jagah sirf 1 column set kiya */
+    grid-template-columns: 1fr; 
+    gap: 30px; /* Boxes ke darmiyan vertical gap */
+    max-width: 800px; /* Text ko bohot zyada phailne se rokne ke liye */
+    margin: 0 auto;   /* Layout ko center mein align karne ke liye */
+}
+
+.info-box {
+    background: #ffffff;
+    padding: 50px;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, natural shadow */
+    /* Box ki width automatically 100% ho jayegi */
+    max-width: 750px; /* Is se text ki line lambi nahi hogi aur parhna asaan rahega */
+    margin: 0 auto 30px auto;
+    margin-bottom: 40px; /* Boxes ke darmiyan gap barha dein */
+    transition: transform 0.4s ease;
+}
+.info-box:hover {
+    transform: translateY(-5px); /* Hover karne par light lift */
+}
+
+.info-box h3 {
+    font-family: 'EB Garamond', serif !important;
+    font-size: 32px !important;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #2c2f26; /* Signature orange underline */
+    display: inline-block;
+    letter-spacing: -0.5px; /* Modern compact look */
+}
+
+.info-box p {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px !important;
+    color: #555555;
+    line-height: 1.9;
+    letter-spacing: 0.1px;            /* Modern look ke liye halki spacing */
+    margin-bottom: 20px;
+    text-align: justify;
+    
+}
+.info-box ul li {
+    font-family: 'Geist', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #333333;
+    margin-bottom: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f4f4f4; /* Subtle separator line */
+}
+.info-box ul {
+    list-style: none; /* Bullet points */
+    margin-top: 25px;
+    padding-left: 20px;
+}
+/* List ke aage chota icon add karne ke liye (Optional) */
+.info-box ul li::before {
+    content: "•";
+    color: #000000; /* Signature orange */
+    margin-right: 15px;
+    font-size: 20px;
 }
