@@ -698,7 +698,7 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 4 horizontal boxes */
     gap: 50px;
     padding: 40px 5%;
-    background-color: #ffffff; /* black background */
+    background-color: none; /* black background */
 }
 
 .stat-card {
@@ -732,36 +732,6 @@ body {
     font-weight: 400; /* Numbers ko simple/light rakha taake text highlight ho */
 }
 
-/* --- Expertise Section Layout --- */
-.expertise-content {
-    padding: 60px 10%;
-}
-
-.expertise-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns mein split */
-    gap: 40px;
-    margin-top: 30px;
-}
-
-.exp-item h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.exp-item p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-}
-
-/* Responsive adjustment for small screens */
-@media (max-width: 768px) {
-    .stats-grid, .expertise-grid {
-        grid-template-columns: 1fr; /* Mobile par 1 column */
-    }
-}
 .professional-profile {
     padding: 60px 10%;
     max-width: 900px;
@@ -774,6 +744,11 @@ body {
     font-size: 32px;
     margin-bottom: 20px;
     color: #333;
+/* Heading ke niche ek subtle underline add karne ke liye */
+    color: #1a1a1a;
+    border-bottom: 2px solid #2c2f26; 
+    display: inline-block;
+    letter-spacing: -0.5px; /* Modern compact look */
 }
 
 .professional-profile p {
@@ -786,22 +761,49 @@ body {
     margin-left: auto;         /* Center align */
     margin-right: auto;
 }
+/* Paragraph (Content) ki styling */
+.exp-content p {
+    font-size: 16px;            /* Professional Profile paragraph ke size se match */
+    font-family: 'Geist', sans-serif; /* Wahi font style */
+    line-height: 1.8;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* --- Expertise Section Layout --- */
+.expertise-content {
+    padding: 60px 10%;
+}
+
+
+.exp-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.exp-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
 .expertise-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     /* Yeh line box expansion ka masla hal kar degi */
-    align-items: stretch; 
+    align-items: start; 
+    margin-bottom: 50px; /* Boxes ke darmiyan gap */
 }
 .exp-box {
     border: none; /* Border ko hata diya */
     box-shadow: 0 4px 15px rgba(24, 27, 12, 1.0); /* Soft premium shadow */
     padding: 30px;              /* Thoda zyada space */
     background: #ffffff; /* White background */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px; /* Halki si round edges */
-    height: 100%; /* Box height ko equal rakhe */
+    height: auto; /* Box height ko equal rakhe */
     display: flex;
     border-left: 5px solid #313526; 
     flex-direction: column;
@@ -828,13 +830,12 @@ body {
     color: #666;
     
 }
-/* Paragraph (Content) ki styling */
-.exp-content p {
-    font-size: 16px;            /* Professional Profile paragraph ke size se match */
-    font-family: 'Geist', sans-serif; /* Wahi font style */
-    line-height: 1.8;
-    color: #666;
-    margin-top: 10px;
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .stats-grid, .expertise-grid {
+        grid-template-columns: 1fr; /* Mobile par 1 column */
+    }
 }
 
 .toggle-btn {
@@ -842,51 +843,60 @@ body {
     background: none;
     border: none;
     text-align: left;
-    font-size: 20px;            /* Professional Profile heading ke size se match */
-    font-family: 'EB Garamond', serif; /* Wahi font style */
+    font-size: 20px;           
+    font-family: 'EB Garamond', serif; 
     font-weight: 600;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     color: #333;
-    padding: 0; /* Extra space khatam */
+    padding: 0; 
     outline: none;
 }
-.toggle-btn span {
-    font-family: 'Geist', sans-serif !important;
-    font-size: 20px;          /* Sign ka size barha diya */
-    font-weight: 300;        /* Sign ko bold aur clear kiya */
-    color: #333;              /* Color ko dark rakha */
-    background: #988764; /* Halki orange background */
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    transition: transform 0.3s ease; /* Smooth rotation ke liye */    
+    color: #333;             
+    background: #988764;
     width: 30px;
-    height: 30px;
-    line-height: 2;           /* Align karne ke liye */
-    margin-left: 10px;        /* Text aur sign ke darmiyan gap */
+    height: 30px;   
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%; /* Circle shape */
+    border-radius: 100%; 
     margin-left: 15px;
     transition: all 0.3s ease;
     vertical-align: middle;
 }
+
+/* Jab box open ho, arrow ko rotate karne ke liye */
+.active .arrow-icon {
+    transform: rotate(180deg);
+}
 /* Hover effect */
-.toggle-btn:hover span {
+.arrow-icon:hover {
     background: #1a1917; /* Darker background on hover */
-    color: #fff;
+    color: #988764;
 }
 .technical-competencies {
     padding: 60px 20%;
-    background-color: #f9f9f9; /* Halka grey background taake ye section alag lage */
-
-}
+    background-color:  #ffffff; /* Halka grey background taake ye section alag lage */
+    }
 /* Technical Competencies heading ki styling */
 .technical-competencies h2 {
     font-family: 'EB Garamond', serif !important; /* Sub-headings wala font */
     font-size: 32px !important;
     text-align: center;
     color: #333;
-    margin-bottom: 50px; /* Ye margin sub-headings ke sath gap barha dega */
+    margin-bottom: 40px; /* Ye margin sub-headings ke sath gap barha dega */
+/* Heading ke niche ek subtle underline add karne ke liye */
+    color: #1a1a1a;
+    border-bottom: 2px solid #2c2f26; /* Signature orange underline */
+    display: inline-block;
+    letter-spacing: -0.5px; /* Modern compact look */
 }
 
 .competency-grid {

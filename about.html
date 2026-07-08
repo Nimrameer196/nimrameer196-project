@@ -37,7 +37,7 @@
     <main class="about-main-wrapper">
       <!-- Hero Section -->
       <section class="about-hero">
-        <h1>About Muhammad Saad</h1>
+        <h1>About Me</h1>
         <p>
           I am a Mechanical Design Engineer passionate about transforming
           engineering concepts into practical, efficient, and manufacturable
@@ -87,15 +87,40 @@
           objective remains the same: to create reliable, efficient, and
           high-performance engineering solutions.
         </p>
+        <!-- Box 2: Engineering Philosophy -->
+        <div class="info-box">
+          <h3>My Engineering Philosophy</h3>
+          <p>
+            I believe successful engineering extends far beyond creating
+            functional designs. Every engineering solution should balance
+            technical performance, manufacturability, reliability,
+            sustainability, and cost-effectiveness. My design philosophy is
+            cantered on understanding the complete engineering lifecycle, from
+            concept development and simulation to manufacturing and continuous
+            improvement, ensuring that every project delivers measurable value
+            and long-term performance.
+          </p>
+        </div>
       </section>
       <!-- Expertise Section -->
       <section class="expertise-section">
-        <h2>Areas of Expertise</h2>
+        <h2>My Areas of Expertise</h2>
         <div class="expertise-grid">
           <!-- Expertise Box 1 -->
           <div class="exp-box">
             <button class="toggle-btn" onclick="toggleText(this)">
-              Product Design & Development <span>+</span>
+              Product Design & Development
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
             </button>
             <div class="exp-content">
               <p>
@@ -108,7 +133,18 @@
           <!-- Expertise Box 2 -->
           <div class="exp-box">
             <button class="toggle-btn" onclick="toggleText(this)">
-              CAD Modelling & Engineering Documentation <span>+</span>
+              CAD Modelling & Engineering Documentation
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
             </button>
             <div class="exp-content">
               <p>
@@ -122,7 +158,18 @@
           <!-- Expertise Box 3 -->
           <div class="exp-box">
             <button class="toggle-btn" onclick="toggleText(this)">
-              Engineering Simulation & Analysis<span>+</span>
+              Engineering Simulation & Analysis
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
             </button>
             <div class="exp-content">
               <p>
@@ -136,7 +183,18 @@
           <!-- Expertise Box 4 -->
           <div class="exp-box">
             <button class="toggle-btn" onclick="toggleText(this)">
-              Manufacturing & Process Improvement<span>+</span>
+              Manufacturing & Process Improvement
+              <svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="18 15 12 9 6 15"></polyline>
+              </svg>
             </button>
             <div class="exp-content">
               <p>
@@ -151,7 +209,7 @@
         </div>
       </section>
       <section class="technical-competencies">
-        <h2>Technical Competencies</h2>
+        <h2>My Technical Competencies</h2>
         <div class="competency-grid">
           <!-- Design Engineering -->
           <div class="comp-box">
@@ -195,7 +253,7 @@
         <div class="info-grid">
           <!-- Box 1: Research & Development -->
           <div class="info-box">
-            <h3>Research & Development</h3>
+            <h3>My Areas of Research & Development</h3>
             <p>
               My research interests focus on advancing engineering solutions
               through computational modelling and analytical methods. Areas of
@@ -211,20 +269,7 @@
               <li>Design for Manufacturing (DFM) & Optimization</li>
             </ul>
           </div>
-          <!-- Box 2: Engineering Philosophy -->
-          <div class="info-box">
-            <h3>Engineering Philosophy</h3>
-            <p>
-              I believe successful engineering extends far beyond creating
-              functional designs. Every engineering solution should balance
-              technical performance, manufacturability, reliability,
-              sustainability, and cost-effectiveness. My design philosophy is
-              cantered on understanding the complete engineering lifecycle, from
-              concept development and simulation to manufacturing and continuous
-              improvement, ensuring that every project delivers measurable value
-              and long-term performance.
-            </p>
-          </div>
+
           <!-- Box 3: What Drives Me -->
           <div class="info-box">
             <h3>What Drives Me</h3>
@@ -290,14 +335,13 @@
     <script>
       function toggleText(btn) {
         let content = btn.nextElementSibling;
-        let span = btn.querySelector("span");
+        // Active class add/remove karein
+        btn.classList.toggle("active");
 
         if (content.style.display === "block") {
           content.style.display = "none";
-          span.innerText = "+";
         } else {
           content.style.display = "block";
-          span.innerText = "-";
         }
       }
     </script>
