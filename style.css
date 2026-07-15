@@ -327,12 +327,13 @@ body {
 }
 
 .footer-light-container {
-    max-width: 1200px;
+    max-width: 4000px;
     margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0 50px !important;
 }
 
 /* Email aur LinkedIn icon ke darmiyan gap */
@@ -746,7 +747,6 @@ body {
     color: #333;
 /* Heading ke niche ek subtle underline add karne ke liye */
     color: #1a1a1a;
-    border-bottom: 2px solid #2c2f26; 
     display: inline-block;
     letter-spacing: -0.5px; /* Modern compact look */
 }
@@ -824,7 +824,7 @@ body {
 }
 .exp-content {
     margin-top: 20px;
-    border-top: 1px solid #f0f0f0; /* Ek halki si line content ke upar */
+    border-top: 1px solid #e0e0e0; /* Ek halki si line content ke upar */
     display: none; /* Default mein text chhupa hua hai */
     padding-top: 20px;
     color: #666;
@@ -856,31 +856,55 @@ body {
 
 .arrow-icon {
     width: 20px;
-    height: 20px;
+    height: 30px;
     margin-left: auto;
     transition: transform 0.3s ease; /* Smooth rotation ke liye */    
-    color: #333;             
-    background: #988764;
-    width: 30px;
-    height: 30px;   
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%; 
-    margin-left: 15px;
-    transition: all 0.3s ease;
-    vertical-align: middle;
+    color: #555;    
+    font-weight: 700; /* Arrow ko thoda bold karne ke liye */         
+   
 }
 
 /* Jab box open ho, arrow ko rotate karne ke liye */
 .active .arrow-icon {
     transform: rotate(180deg);
 }
-/* Hover effect */
-.arrow-icon:hover {
-    background: #1a1917; /* Darker background on hover */
-    color: #988764;
+.toggle-wrapper {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    overflow: hidden; /* Ye ensure karega ke andar ka content bahar na nikle */
 }
+
+/* Premium Card (Buttons ke liye) */
+.toggle-btn.premium-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 25px 30px;
+    border: none;            /* Border hata dein */
+    box-shadow: none;        /* Shadow hata dein */
+    border-radius: 0;        /* Wrapper ka radius follow karega */
+    cursor: pointer;
+    margin-bottom: 0;        /* Wrapper ke sath chipka rahe */
+    font-family: 'EB Garamond', serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.box-content {
+    display: none;
+    padding: 0 30px 25px 30px; /* Upar se 0 taake button ke sath mil jaye */
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0; /* Button aur content ke beech halki line */
+    padding-top: 20px;
+    margin: 0 30px; /* Center align */
+     
+}
+
+
 .technical-competencies {
     padding: 60px 20%;
     background-color:  #ffffff; /* Halka grey background taake ye section alag lage */
@@ -892,11 +916,7 @@ body {
     text-align: center;
     color: #333;
     margin-bottom: 40px; /* Ye margin sub-headings ke sath gap barha dega */
-/* Heading ke niche ek subtle underline add karne ke liye */
-    color: #1a1a1a;
-    border-bottom: 2px solid #2c2f26; /* Signature orange underline */
-    display: inline-block;
-    letter-spacing: -0.5px; /* Modern compact look */
+
 }
 
 .competency-grid {
@@ -913,7 +933,7 @@ body {
     margin-bottom: 25px;
     color: #333; /* Saad ka signature orange color */
     text-align: center;
-    font-weight: 700;
+    font-weight: 1000;
 }
 
 .comp-box ul {
@@ -925,8 +945,6 @@ body {
     font-family: 'Geist', sans-serif;
     font-size: 15px;
     padding: 8px 0;
-    border-bottom: 1px solid #eee;
-    color: #444;
     font-weight: 300;
 }
 .comp-box ul li span { 
@@ -970,9 +988,7 @@ body {
     font-weight: 700;
     margin-bottom: 30px;
     color: #1a1a1a;
-    border-bottom: 2px solid #2c2f26; /* Signature orange underline */
     display: inline-block;
-    letter-spacing: -0.5px; /* Modern compact look */
 }
 
 .info-box p {
@@ -993,7 +1009,7 @@ body {
     color: #333333;
     margin-bottom: 12px;
     padding: 10px 0;
-    border-bottom: 1px solid #f4f4f4; /* Subtle separator line */
+    
 }
 .info-box ul {
     list-style: none; /* Bullet points */
