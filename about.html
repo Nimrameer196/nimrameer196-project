@@ -107,6 +107,49 @@
                  and long-term performance.</p>
             </div>
         </div>
+                  <!-- R&D Section -->
+<div class="toggle-wrapper">
+    <button class="toggle-btn premium-card accordion-btn" onclick="toggleAccordion(this)">
+        My Areas of Research & Development
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </button>
+   <div class="box-content accordion-content">
+            <p>
+              My research interests focus on advancing engineering solutions
+              through computational modelling and analytical methods. Areas of
+              particular interest include:
+            </p>
+            <ul>
+              <li>Industrial Machinery & Equipment Design</li>
+              <li>Machine Components & Assemblies</li>
+              <li>Mechanical Product Development</li>
+              <li>Automation Fixtures & Jigs</li>
+              <li>Structural & Mechanical Systems</li>
+              <li>Material Handling Systems</li>
+              <li>Design for Manufacturing (DFM) & Optimization</li>
+            </ul>
+          </div>
+          </div>
+
+          
+          <!-- What Drives Me Section -->
+<div class="toggle-wrapper">
+    <button class="toggle-btn premium-card accordion-btn" onclick="toggleAccordion(this)">
+        What Drives Me
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+    </button>
+    <div class="box-content accordion-content">
+        <p> I am motivated by complex engineering challenges that require
+              creativity, precision, and technical expertise. Whether developing
+              a new mechanical system, optimizing an existing design, or
+              conducting engineering research, I enjoy transforming ideas into
+              practical solutions that create tangible impact.</p>
+    </div>
+</div>
         
       </section>
 
@@ -260,54 +303,6 @@
           </div>
         </div>
       </section>
-      <section class="additional-info">
-        <div class="info-grid">
-
-          <!-- R&D Section -->
-<div class="toggle-wrapper">
-    <button class="toggle-btn premium-card accordion-btn" onclick="toggleAccordion(this)">
-        My Areas of Research & Development
-        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-    </button>
-   <div class="box-content accordion-content">
-            <p>
-              My research interests focus on advancing engineering solutions
-              through computational modelling and analytical methods. Areas of
-              particular interest include:
-            </p>
-            <ul>
-              <li>Industrial Machinery & Equipment Design</li>
-              <li>Machine Components & Assemblies</li>
-              <li>Mechanical Product Development</li>
-              <li>Automation Fixtures & Jigs</li>
-              <li>Structural & Mechanical Systems</li>
-              <li>Material Handling Systems</li>
-              <li>Design for Manufacturing (DFM) & Optimization</li>
-            </ul>
-          </div>
-          </div>
-
-          
-          <!-- What Drives Me Section -->
-<div class="toggle-wrapper">
-    <button class="toggle-btn premium-card accordion-btn" onclick="toggleAccordion(this)">
-        What Drives Me
-        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-    </button>
-    <div class="box-content accordion-content">
-        <p> I am motivated by complex engineering challenges that require
-              creativity, precision, and technical expertise. Whether developing
-              a new mechanical system, optimizing an existing design, or
-              conducting engineering research, I enjoy transforming ideas into
-              practical solutions that create tangible impact.</p>
-    </div>
-</div>
- 
-      </section>
     </main>
 
     <!-- 4. PREMIUM FOOTER SECTION -->
@@ -365,21 +360,25 @@ function toggleExpertise(btn) {
     content.style.display = (content.style.display === "block") ? "none" : "block";
 }
 
-// Function 2: Philosophy/R&D/Drives Me ke liye (Accordion - Ek band, ek khula)
 function toggleAccordion(btn) {
-    let allButtons = document.querySelectorAll('.accordion-btn');
-    let allContents = document.querySelectorAll('.accordion-content');
     let currentContent = btn.nextElementSibling;
+    let isActive = btn.classList.contains('active');
 
-    // Pehle sab ko band karo
-    allButtons.forEach(b => b.classList.remove('active'));
-    allContents.forEach(c => c.style.display = 'none');
+    // 1. Sabse pehle saare buttons aur contents ko reset karo
+    // (Taake jab naya button khule, to pichla band ho jaye)
+    document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
 
-    // Phir sirf click wale ko open karo (agar pehle band tha)
-    if (btn.style.display !== 'block') {
+    // 2. Toggle Logic: 
+    // Agar button pehle ACTIVE NAHI THA, to ise active karo aur open karo
+    // Agar active tha (matlab humne dubara click kiya), to upar reset ho chuka hai,
+    // isliye hum sirf tabhi open karenge agar isActive false tha.
+    if (!isActive) {
         btn.classList.add('active');
         currentContent.style.display = 'block';
-    }
+    } 
+    // Agar isActive true tha, to block execute nahi hoga, 
+    // aur reset hone ki wajah se box band hi rahega (Toggle Off).
 }
     </script>
   </body>

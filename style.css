@@ -694,18 +694,23 @@ body {
 /* --- About Page Stats Grid --- */
 .stats-grid {
     display: grid;
-    margin-top: 70px;
-    margin-bottom: 0px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     grid-template-columns: repeat(4, 1fr); /* 4 horizontal boxes */
-    gap: 50px;
-    padding: 40px 5%;
+    gap: 30px;
     background-color: none; /* black background */
+    justify-content: left; /* Center align */
+    flex-wrap: wrap; /* Responsive ke liye */
+    
 }
 
 .stat-card {
+    flex: 1; /* Boxes ko equal width dene ke liye */
+    min-width: 150px;        /* Kam se kam itni width ho */
+    max-width: 250px;        /* Zada se zada itni width ho (taake bohot bade na hon) */
     text-align: center;
     border: none; /* Border boxes ke liye */
-     box-shadow: 0 10px 20px rgb(24, 27, 12); /* Halki si shadow */
+    box-shadow: 0 10px 20px rgb(24, 27, 12); /* Halki si shadow */
     padding: 30px;
     display: flex;
     flex-direction: column; /* Text upar, number neeche */
@@ -769,7 +774,25 @@ body {
     color: #666;
     margin-top: 10px;
 }
+/* Research section ke ul/li ko target karein */
+.box-content ul {
+    list-style-type: none; /* Ya jo bhi aap use kar rahi hain */
+    padding: 0;    /* Dots aur text ke darmiyan jagah kam karne ke liye */ 
+    margin: 0 ;        /* Center align rakhne ke liye */
+    text-align: center; /* Poori list ko center karne ke liye */
+}
 
+.box-content li {
+    display: inline-block; /* Element sirf text jitni jagah le ga */
+    width: auto;           /* Width ko auto par set karein */
+    padding-bottom: 5px;   /* Text aur line ke beech thoda gap */
+    margin-bottom: 10px;   /* Lines ke darmiyan vertical gap */
+    border-bottom: 1px solid #e0e0e0; /* Sirf text ke neeche line */
+    display: block;        /* Agar aap chahti hain ke har item nayi line par ho */
+    width: fit-content;    /* Line ki width text ke barabar ho jaye gi */
+    margin-left: auto;     /* Center align karne ke liye */
+    margin-right: auto;
+}
 /* --- Expertise Section Layout --- */
 .expertise-content {
     padding: 60px 10%;
@@ -903,6 +926,9 @@ body {
     margin: 0 30px; /* Center align */
      
 }
+.accordion-content {
+    display: none; /* Sabse pehle sab band */
+}s
 
 
 .technical-competencies {
@@ -957,69 +983,4 @@ body {
     background-color: #ffffff; /* Clean white background */
 }
 
-.info-grid {
-    display: grid;
-    /* 3 columns ki jagah sirf 1 column set kiya */
-    grid-template-columns: 1fr; 
-    gap: 30px; /* Boxes ke darmiyan vertical gap */
-    max-width: 800px; /* Text ko bohot zyada phailne se rokne ke liye */
-    margin: 0 auto;   /* Layout ko center mein align karne ke liye */
-}
 
-.info-box {
-    background: #ffffff;
-    padding: 50px;
-    border: 1px solid #eeeeee;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft, natural shadow */
-    /* Box ki width automatically 100% ho jayegi */
-    max-width: 750px; /* Is se text ki line lambi nahi hogi aur parhna asaan rahega */
-    margin: 0 auto 30px auto;
-    margin-bottom: 40px; /* Boxes ke darmiyan gap barha dein */
-    transition: transform 0.4s ease;
-}
-.info-box:hover {
-    transform: translateY(-5px); /* Hover karne par light lift */
-}
-
-.info-box h3 {
-    font-family: 'EB Garamond', serif !important;
-    font-size: 32px !important;
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    display: inline-block;
-}
-
-.info-box p {
-    font-family: 'Geist', sans-serif;
-    font-size: 16px !important;
-    color: #555555;
-    line-height: 1.9;
-    letter-spacing: 0.1px;            /* Modern look ke liye halki spacing */
-    margin-bottom: 20px;
-    text-align: justify;
-    
-}
-.info-box ul li {
-    font-family: 'Geist', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.2;
-    color: #333333;
-    margin-bottom: 12px;
-    padding: 10px 0;
-    
-}
-.info-box ul {
-    list-style: none; /* Bullet points */
-    margin-top: 25px;
-    padding-left: 20px;
-}
-/* List ke aage chota icon add karne ke liye (Optional) */
-.info-box ul li::before {
-    content: "•";
-    color: #000000; /* Signature orange */
-    margin-right: 15px;
-    font-size: 20px;
-}
