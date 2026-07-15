@@ -27,6 +27,12 @@
         <span class="logo-divider-line">|</span>
         <span class="logo-name">Muhammad Saad</span>
       </div>
+      <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
       <nav class="nav-links">
         <a href="index.html">HOME</a>
         <a href="work.html">PROJECTS</a>
@@ -381,5 +387,11 @@ function toggleAccordion(btn) {
     // aur reset hone ki wajah se box band hi rahega (Toggle Off).
 }
     </script>
+    <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
   </body>
 </html>

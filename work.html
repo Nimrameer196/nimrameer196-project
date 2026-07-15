@@ -26,6 +26,12 @@
         <span class="logo-divider-line">|</span>
         <span class="logo-name">Muhammad Saad</span>
       </div>
+      <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
       <nav class="nav-links">
         <a href="index.html">HOME</a>
         <a href="work.html" class="active">PROJECTS</a>
@@ -198,4 +204,10 @@
       </div>
     </footer>
   </body>
+  <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
 </html>
