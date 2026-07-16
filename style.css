@@ -988,36 +988,113 @@ body {
     padding: 80px 10%;
     background-color: #ffffff; /* Clean white background */
 }
-/* Hamburger ka design */
+
+/* Hamburger Icon Styles */
 .hamburger {
     display: none; /* Desktop par hide */
-    flex-direction: column;
     cursor: pointer;
-    gap: 5px;
 }
 
-.hamburger span {
+.bar {
+    display: block;
     width: 25px;
     height: 3px;
+    margin: 5px auto;
     background-color: #1a1a1a;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Mobile Screen ka code */
+/* Cross Animation */
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+/* Sirf Desktop ke liye */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important; /* Desktop par hamesha dikhayega */
+    }
+}
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
-    .hamburger { display: flex; } /* Mobile par show */
+    .hamburger { display: block; } /* Mobile par show */
     
     .nav-links {
-        display: none; /* Default band */
-        flex-direction: column;
+        display: none !important; /* Default band */
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         width: 100%;
-        background: white;
-        text-align: center;
+        background-color: #ffffff;
+        flex-direction: column;
         padding: 20px 0;
+        text-align: center;
         box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
-    
-    .nav-links.active { display: flex; } /* JavaScript se toggle hoga */
+
+    .nav-links.active {
+        display: flex !important; /* Click par open */
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Hero Section ki height ko kam karein */
+    .hero-section-new {
+        width: 100vw !important;  /* Screen ki puri width */
+        margin: 0 !important;
+        height: 50vh !important; /* Mobile par height fixed na ho */
+        padding: 0 !important; /* Mobile par padding kam */
+        margin-top: 80px !important;
+        border-radius: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: relative;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* 2. Hero Content container ko full width dein */
+    .hero-content-shifted {
+        position: absolute;
+        bottom: 20px;                 /* Image ke neeche text le aye ga */
+        left: 20px;
+        right: 20px;
+        width: auto!important;
+        text-align: left !important; /* Mobile par text center mein acha lagta hai */
+        padding: 1px;
+        border-radius: 8px;
+    }
+
+    /* 3. Main Title ka font size chota karein */
+    .hero-content-shifted .main-title {
+        font-size: 32px !important; /* 56px se kam karke 32px karein */
+        white-space: normal !important; /* Text ko wrap hone dein taake break na ho */
+        line-height: 1.2 !important;
+    }
+
+    /* 4. Description aur Subtitle ko adjust karein */
+    .hero-content-shifted .one-line-desc {
+        font-size: 14px !important;
+        margin: 0 auto !important; /* Center align */
+    }
+    .bg-img {
+    object-position: center center !important;
+    }
+    /* 3. Image ko screen touch karwayein */
+    .hero-bg-image {
+        width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    body {
+        padding: 0 !important;
+    }
+    html, body {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        overflow-x: hidden !important; /* Side scroll rokne ke liye */
+    }
 }
