@@ -1016,7 +1016,23 @@ body {
 }
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
-    .hamburger { display: block; } /* Mobile par show */
+    .navbar {
+        display: flex !important;
+        justify-content: space-between !important; /* Dono ko opposite corners par rakhega */
+        align-items: center !important;
+        padding: 15px 20px !important; /* Padding adjust karein */
+        width: 100% !important;
+    }
+    .custom-logo {
+        flex: 1; /* Logo ko apni jagah lene dein */
+        font-size: 16px; /* Agar text bada hai to chota karein */
+        white-space: nowrap; /* Text ko line break nahi karne dega */
+    }
+    .hamburger { 
+        margin-left: 20px; /* Logo aur icon ke darmiyan gap */
+        display: block !important;
+
+    } 
     
     .nav-links {
         display: none !important; /* Default band */
