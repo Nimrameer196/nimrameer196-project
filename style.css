@@ -640,14 +640,7 @@ body {
     background-color:#6b5b3d !important; /* Halka sa dark tone hover par */
 }
 
-/* Responsive Setting for Small Screens */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        padding: 0 20px;
-    }
-}
+
 /* --- VIEW ALL BUTTON STYLING --- */
 .view-all-container {
     display: flex;
@@ -860,13 +853,6 @@ body {
     
 }
 
-/* Responsive adjustment for small screens */
-@media (max-width: 768px) {
-    .stats-grid, .expertise-grid {
-        grid-template-columns: 1fr; /* Mobile par 1 column */
-    }
-}
-
 .toggle-btn {
     width: 100%;
     background: none;
@@ -1020,7 +1006,7 @@ body {
         display: flex !important;
         justify-content: space-between !important; /* Dono ko opposite corners par rakhega */
         align-items: center !important;
-        padding: 15px 20px !important; /* Padding adjust karein */
+        padding: 20px 20px !important; /* Padding adjust karein */
         width: 100% !important;
     }
     .custom-logo {
@@ -1106,11 +1092,225 @@ body {
     }
     body {
         padding: 0 !important;
-    }
-    html, body {
-        padding: 0 !important;
         margin: 0 !important;
         width: 100% !important;
         overflow-x: hidden !important; /* Side scroll rokne ke liye */
+        
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .recent-work-section {
+        margin-top: 100px !important; /* Navbar ki height jitni space */
+    }
+    /* 1. Heading ko chota karein */
+    .section-heading-centered {
+        font-size: 28px !important; /* 42px se kam karke 28px */
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
+    }
+
+    /* 2. Grid mein spacing set karein */
+    .recent-work-grid {
+        padding: 0 20px !important; /* Sides se thoda gap */
+        gap: 20px !important;      /* Cards ke darmiyan gap kam */
+    }
+
+    /* 3. Project Cards ki height kam karein */
+    .recent-project-card {
+        height: 350px !important; /* 500px se kam karke 350px, taake mobile par scroll kam ho */
+    }
+
+    /* 4. Text ka size adjust karein */
+    .project-overlay-text h3 {
+        font-size: 28px !important; /* 46px se kam */
+    }
+    
+    .project-tags {
+        font-size: 12px !important;
+    }
+}
+@media (max-width: 768px) {
+    /* 1. Footer Brand Name adjust karein */
+    .footer-brand-name {
+        font-size: 24px !important; /* Mobile par font size thoda chota */
+        margin-bottom: 20px !important;
+        text-align: center;
+    }
+    /* 1. Footer Top Section (Dark Part) */
+    .footer-top-dark {
+        padding: 80px 20px !important; /* Padding kam ki taake mobile par zyada lamba na lage */
+    }
+
+    /* Capsule Button ka size mobile par adjust karein */
+    .new-style-btn {
+        padding: 15px 40px !important; /* Button chota kiya */
+        font-size: 16px !important;
+    }
+
+    /* 2. Footer Bottom Section (Light Part) */
+    .footer-light-container {
+        flex-direction:column!important; /* Links aur social icons ko column mein layen */
+        gap: 0px !important;
+        padding: 1px 20px !important;
+        text-align: center;
+    }
+    /* 3. Social Icons aur links ko center karein */
+    .footer-right-info {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center;
+    }
+
+    /* Social Icons ki alignment */
+    .footer-social-icons {
+        margin-left: 0 !important; /* Desktop wali margin khatam ki */
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Contact Section wrapper ki padding kam karein */
+    .contact-main-wrapper {
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+    }
+
+    /* 2. Grid ko column layout mein badlein */
+    .contact-container {
+        grid-template-columns: 1fr !important; /* Single column */
+        gap: 40px !important;
+        padding: 0 20px !important;
+    }
+
+    /* 3. Text section ki alignment center karein */
+    .contact-info-panel {
+        text-align: center !important;
+    }
+
+    .info-meta-list {
+        align-items: center; /* Icons aur text ko center mein layen */
+    }
+
+    /* 4. Form aur Input fields ko adjust karein */
+    .premium-contact-form {
+        width: 100% !important;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        font-size: 16px !important; /* Mobile par typing ke liye behtar size */
+    }
+    /* 1. Title ko neeche move karne ke liye margin-top increase karein */
+    .contact-info-panel .contact-title {
+        font-size: 32px !important;    /* Text size chota kiya (52px se) */
+        margin-top: 26px !important;   /* Neeche shift karne ke liye space */
+        margin-bottom: 15px !important;
+    }
+
+   
+}
+
+@media (max-width: 768px) {
+    /* 1. "ABOUT ME" Heading ko adjust karein */
+    .about-hero h1 {
+        font-size: 32px !important;    /* Size chota kiya */
+        margin-top: 26px !important;   /* Navbar se door karne ke liye */
+        margin-bottom: 20px !important;
+    }
+
+    /* 2. Paragraph text ko adjust karein */
+    .about-hero p {
+        font-size: 15px !important;    /* Text size chota kiya */
+        line-height: 1.6 !important;   /* Readability behtar ki */
+        padding: 0 15px !important;    /* Sides se thoda gap diya */
+    }
+    /* 1. Stats Grid (4 boxes) ko 2x2 grid mein convert karein */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 4 ke bajaye 2 columns */
+        gap: 15px !important;
+        margin-top: 30px !important;
+    }
+
+    .stat-card {
+        padding: 20px !important; /* Mobile par padding kam */
+    }
+
+    /* 2. Expertise Grid ko single column mein layen */
+    .expertise-grid {
+        grid-template-columns: 1fr !important; /* Mobile par ek hi column */
+        gap: 20px !important;
+    }
+
+    /* 3. Toggle button (Premium Card) text adjustment */
+    .toggle-btn {
+        font-size: 18px !important; /* Text chota kiya */
+        padding: 20px !important;
+    }
+    
+    .toggle-btn.premium-card {
+        padding: 20px !important;
+    
+    }
+
+    /* 2. Box ke andar ka main text (Content) */
+    .box-content {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        padding: 15px !important; /* Content ke charo taraf space */
+        text-align: justify !important; /* Neat look ke liye */
+    }
+
+    /* 4. Professional Profile padding */
+    .professional-profile {
+        padding: 40px 20px !important;
+    }
+    /* 1. Heading ka size chota karein */
+    .professional-profile h2 {
+        font-size: 30px !important;
+        margin-bottom: 15px !important;
+    }
+    /* 2. Paragraph text ko adjust karein */
+    .professional-profile p {
+        font-size: 14px !important;   /* Mobile par parhne mein aasaan */
+        line-height: 1.6 !important;
+        text-align: center !important; /* Text ko dono sides se barabar karein */
+        padding: 0 15px !important;    /* Sides se padding taake screen se na chipke */
+        max-width: 100% !important;
+    }
+    /* 1. "My Areas of Expertise" ke boxes ke liye */
+    /* Agar aapke boxes kisi wrapper mein hain, toh us wrapper ko padding dein */
+    .expertise-wrapper, 
+    .accordion-container { 
+        padding-left: 50px !important;
+        padding-right: 50px !important;
+    }
+    body {
+        padding: 0 20px !important; /* Puri body ko hi side se push kar dein */
+    }
+}
+@media (max-width: 768px) {
+    /* 1. Competency Grid ko single column mein layen */
+    .competency-grid {
+        grid-template-columns: 1fr !important; /* 3 columns se 1 column */
+        gap: 30px !important;                 /* Mobile par gap kam karein */
+        padding: 0 20px !important;
+    }
+
+    /* 2. Container ki padding adjust karein */
+    .technical-competencies {
+        padding: 40px 15px !important;
+    }
+
+    /* 3. Heading ka size mobile ke liye set karein */
+    .technical-competencies h2 {
+        font-size: 26px !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* 4. Comp-box items ki alignment */
+    .comp-box {
+        text-align: center;
     }
 }
