@@ -1069,11 +1069,9 @@ body {
         left: 20px !important;
         right: 25px !important;
     }
-
     /* 3. Main Title ka font size chota karein */
     .hero-content-shifted .main-title {
         font-size: 24px !important; /* 56px se kam karke 32px karein */
-        white-space: nowrap !important; /* Text ko wrap hone dein taake break na ho */
         line-height: 1.1 !important;
     }
 
@@ -1189,9 +1187,8 @@ body {
 
     /* 3. Text section ki alignment center karein */
     .contact-info-panel {
-        text-align: left !important;
+        text-align: center !important;
     }
-
     .info-meta-list {
         align-items: left; /* Icons aur text ko left mein layen */
     }
