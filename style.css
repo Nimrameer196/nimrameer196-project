@@ -1184,16 +1184,16 @@ body {
     .contact-container {
         grid-template-columns: 1fr !important; /* Single column */
         gap: 40px !important;
-        padding: 0 20px !important;
+        padding: 0 2px !important;
     }
 
     /* 3. Text section ki alignment center karein */
     .contact-info-panel {
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .info-meta-list {
-        align-items: center; /* Icons aur text ko center mein layen */
+        align-items: left; /* Icons aur text ko left mein layen */
     }
 
     /* 4. Form aur Input fields ko adjust karein */
