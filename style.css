@@ -1046,7 +1046,7 @@ body {
         margin: 0 !important;
         height: 50vh !important; /* Mobile par height fixed na ho */
         padding: 0 !important; /* Mobile par padding kam */
-        margin-top: 120px !important;
+        margin-top: 100px !important;
         border-radius: 0 !important;
         left: 0 !important;
         right: 0 !important;
@@ -1108,13 +1108,13 @@ body {
 
 @media (max-width: 768px) {
     .recent-work-section {
-        margin-top: 100px !important; /* Navbar ki height jitni space */
+        margin-top: 10px !important; /* Navbar ki height jitni space */
     }
     /* 1. Heading ko chota karein */
     .section-heading-centered {
         font-size: 28px !important; /* 42px se kam karke 28px */
-        margin-top: 40px !important;
-        margin-bottom: 30px !important;
+        margin-top: 100px !important;
+        margin-bottom: 40px !important;
     }
 
     /* 2. Grid mein spacing set karein */
@@ -1243,21 +1243,48 @@ body {
         grid-template-columns: repeat(2, 1fr) !important; /* 4 ke bajaye 2 columns */
         gap: 15px !important;
         margin-top: 30px !important;
+        align-items: stretch !important; /* Ye sabse zaroori hai */
     }
 
     .stat-card {
-        padding: 20px !important; /* Mobile par padding kam */
+        min-height: 100px !important; /* Sab boxes ki kam az kam height barabar ho */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important; /* Content ko center mein rakhega */
+        padding: 10px !important
+    }
+    /* 1. Stat title (Engineering Experience, etc.) ka font size kam karein */
+    .stat-text {
+        font-size: 13px !important; /* 20px se kam karke 13px kiya */
+        margin-bottom: 5px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 2. Stat number (4+ Years, etc.) ka font size kam karein */
+    .stat-number {
+        font-size: 12px !important; /* 15px se kam karke 12px kiya */
+    }
+
+    /* 3. Stat card ki padding adjust karein taake text ko jagah mile */
+    .stat-card {
+        padding: 10px 5px !important; /* Padding kam ki taake width barh jaye */
     }
 
     /* 2. Expertise Grid ko single column mein layen */
     .expertise-grid {
         grid-template-columns: 1fr !important; /* Mobile par ek hi column */
-        gap: 20px !important;
+        gap: 10px !important;
+    }
+    /* Yeh class 'My Areas of Expertise' heading ke liye hai */
+    .expertise-section h2 { /* Yahan apni heading wali class ka naam likhein */
+        font-size: 24px !important; /* 32px se kam karke 24px ya 22px karein */
+        margin-top: 10px !important;
+        margin-bottom: 30px !important;
     }
 
     /* 3. Toggle button (Premium Card) text adjustment */
     .toggle-btn {
-        font-size: 18px !important; /* Text chota kiya */
+        font-size: 16px !important; /* Text chota kiya */
         padding: 20px !important;
     }
     
@@ -1269,18 +1296,59 @@ body {
     /* 2. Box ke andar ka main text (Content) */
     .box-content {
         font-size: 14px !important;
-        line-height: 1.5 !important;
-        padding: 15px !important; /* Content ke charo taraf space */
-        text-align: justify !important; /* Neat look ke liye */
+        padding: 10px !important; /* Content ke charo taraf space */
+        text-align: center !important; /* Neat look ke liye */
+        padding-left: 0px !important;    /* Left side se thoda space */
+        padding-right: 0px !important;   /* Right side se thoda space taake text na phailay */
+        line-height: 1.1 !important;      /* Lines ke darmiyan behtar gap */
+    }
+    @media (max-width: 768px) {
+    .exp-box {
+        min-height: auto !important;  /* Fixed height khatam ki */
+        padding: 10px 15px !important; /* Padding kam ki taake box chota ho */
+        display: flex !important;
+        flex-direction: column !important; /* Heading aur arrow ko ek line mein layega */
+        align-items: flex-start!important; /* Vertical center alignment */
+        justify-content: space-between !important; /* Heading left aur arrow right par */
+        padding-bottom: 10px !important;
     }
 
+    .exp-item h3 {
+        white-space: nowrap !important; /* Heading ko break hone se rokega */
+        overflow: hidden !important;
+        text-overflow: ellipsis !important; /* Agar text bada ho to ... dikhaye */
+        font-size: 14px !important; /* Text ko thoda chota kiya */
+        width: 100% !important;
+        text-align: left !important;
+        margin-bottom: 10px !important;
+    }
+    /* 3. Content (jo click ke baad khulta hai) ko center align karein */
+    .exp-content {
+        text-align: center !important; /* Text center mein aaye ga */
+        width: 100% !important;
+        margin-top: 1px !important;    /* Gap kam kiya */
+        padding-top: 5px !important;   /* Line aur text ke darmiyan ki space kam ki */
+        border-top: 1px solid #e0e0e0;
+    }
+    /* 2. Agar line (border-top) aur text ke beech gap zyada hai */
+    .exp-content p {
+        margin-top: 5px !important;    /* Line aur paragraph ke beech ka gap */
+        margin-bottom: 0 !important;
+        font-size: 13px !important;    /* Text ko thoda chota taake box compact lage */
+    }
+    /* 1. Upar wale boxes ke container ka bottom margin kam karein */
+    .toggle-wrapper { /* Yahan us wrapper/class ka naam likhein jo upar wale 3 boxes ko hold kar raha hai */
+        margin-bottom: 5px !important; 
+    }
+}
+    
     /* 4. Professional Profile padding */
     .professional-profile {
         padding: 40px 20px !important;
     }
     /* 1. Heading ka size chota karein */
     .professional-profile h2 {
-        font-size: 30px !important;
+        font-size: 24px !important;
         margin-bottom: 15px !important;
     }
     /* 2. Paragraph text ko adjust karein */
@@ -1300,29 +1368,37 @@ body {
     }
     body {
         padding: 0 20px !important; /* Puri body ko hi side se push kar dein */
+    
     }
+    
+     
 }
 @media (max-width: 768px) {
     /* 1. Competency Grid ko single column mein layen */
     .competency-grid {
         grid-template-columns: 1fr !important; /* 3 columns se 1 column */
-        gap: 30px !important;                 /* Mobile par gap kam karein */
+        gap: 20px !important;                 /* Mobile par gap kam karein */
         padding: 0 20px !important;
     }
 
     /* 2. Container ki padding adjust karein */
     .technical-competencies {
-        padding: 40px 15px !important;
+        padding: 10px 15px !important;
     }
 
     /* 3. Heading ka size mobile ke liye set karein */
     .technical-competencies h2 {
-        font-size: 26px !important;
-        margin-bottom: 25px !important;
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
     }
 
     /* 4. Comp-box items ki alignment */
     .comp-box {
         text-align: center;
+    }
+    /* comp-box ke andar wali heading ka size chota karne ke liye */
+    .comp-box h3 { /* Agar heading <h3> hai, to ye use karein */
+        font-size: 20px !important; /* Apni zaroorat ke mutabiq 16px ya 18px rakhein */
+        margin-bottom: 10px !important;
     }
 }
