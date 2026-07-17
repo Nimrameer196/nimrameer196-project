@@ -1069,17 +1069,22 @@ body {
         left: 20px !important;
         right: 25px !important;
     }
+   
+
     /* 3. Main Title ka font size chota karein */
     .hero-content-shifted .main-title {
         font-size: 24px !important; /* 56px se kam karke 32px karein */
-        line-height: 1.1 !important;
+        margin-bottom: 2px !important; /* Yahan gap kam hoga */
+        line-height: 0.1 !important;
     }
 
     /* 4. Description aur Subtitle ko adjust karein */
     .hero-content-shifted .one-line-desc {
         font-size: 12px !important;
         margin: 0 auto !important; /* Center align */
+        margin-bottom: 0px !important; /* Title aur description ke beech ka gap */
     }
+    
     .bg-img {
     object-position: center center !important;
     }
@@ -1189,8 +1194,15 @@ body {
     .contact-info-panel {
         text-align: center !important;
     }
+
     .info-meta-list {
-        align-items: left; /* Icons aur text ko left mein layen */
+        align-items: left !important; /* Icons aur text ko left mein layen */
+    }
+    /* 2. Har meta-item ko left align force karein */
+    .meta-item {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
     }
 
     /* 4. Form aur Input fields ko adjust karein */
